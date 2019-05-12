@@ -3,6 +3,9 @@ var gMarkdownToJson = require('gulp-markdown-to-json');
 var gMarkdownToHtml = require('gulp-markdown');
 var gMarkdownPDF = require('gulp-markdown-pdf'); 
 var merge = require('gulp-merge-json');
+const auth = require('./firebaseConfig').auth
+const database = require('./firebaseConfig').database
+const chat = require('./firebaseConfig').chat
 
 // Markdown to HTML
 var nMarked = require('marked');
@@ -325,9 +328,50 @@ gulp.task('MergeJSON',function(){
 // Watching
 
 gulp.task('watching',function(){
-	gulp.watch('./Markdowns/**/*.md',['MD2HTML','MD2JSON','MD2PDF']);
+	gulp.watch('./Markdowns/**/*.md',['MD2HTML','MD2JSON','MD2PDF','MergeJSON']);
 });
 
 // Default
 
 gulp.task('default',['MD2HTML','MD2JSON','MD2PDF','MergeJSON']);
+
+// Download from firebase
+gulp.task('DownloadData', function(){
+	auth.onAuthStateChanged(function(user) {
+		if (user) {
+		  const ref = database.ref('users/' + user.uid)
+		  console.log(ref.toJSON())
+		  ref.once('value', function(snapshot) {
+			console.log(snapshot.val())
+			chat.setUser(user.uid, snapshot.child('name').val(), function() {
+			  chat.getKnowledgeListByApplication(function(knowledges) {
+				for (const knowledge in knowledges) {
+				  console.log(knowledges[knowledge])
+				}
+			  })
+			})
+		  })
+		}
+	  })
+	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
+})
+// Upload to firebase
+gulp.task('UploadData', function(){
+	auth.onAuthStateChanged(function(user) {
+		if (user) {
+		  const ref = database.ref('users/' + user.uid)
+		  console.log(ref.toJSON())
+		  ref.once('value', function(snapshot) {
+			console.log(snapshot.val())
+			chat.setUser(user.uid, snapshot.child('name').val(), function() {
+			  chat.getKnowledgeListByApplication(function(knowledges) {
+				for (const knowledge in knowledges) {
+				  console.log(knowledges[knowledge])
+				}
+			  })
+			})
+		  })
+		}
+	  })
+	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
+})
