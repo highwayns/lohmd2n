@@ -311,9 +311,10 @@ gulp.task('MD2JSON',function(){
 			data.knowledgecontents = result;
 			return data;
 		}))
-	//		.pipe(gMarkdownToJson(nMarked))
 		.pipe(gulp.dest('./JSONs'));
 });
+
+// MergeJSON
 
 gulp.task('MergeJSON',function(){
 	gulp.src('./JSONs/**/*.json')
