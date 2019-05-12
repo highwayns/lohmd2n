@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var gMarkdownToJson = require('gulp-markdown-to-json');
 var gMarkdownToHtml = require('gulp-markdown');
 var gMarkdownPDF = require('gulp-markdown-pdf'); 
+var merge = require('gulp-merge-json');
+
 // Markdown to HTML
 var nMarked = require('marked');
 nMarked.setOptions({
@@ -313,6 +315,12 @@ gulp.task('MD2JSON',function(){
 		.pipe(gulp.dest('./JSONs'));
 });
 
+gulp.task('MergeJSON',function(){
+	gulp.src('./JSONs/**/*.json')
+	.pipe(merge())
+	.pipe(gulp.dest('./dist'));
+});
+
 // Watching
 
 gulp.task('watching',function(){
@@ -321,4 +329,4 @@ gulp.task('watching',function(){
 
 // Default
 
-gulp.task('default',['MD2HTML','MD2JSON','MD2PDF']);
+gulp.task('default',['MD2HTML','MD2JSON','MD2PDF','MergeJSON']);
