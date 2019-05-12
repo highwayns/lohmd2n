@@ -37,6 +37,7 @@ gulp.task('MD2PDF',function(){
 gulp.task('MD2JSON',function(){
 	gulp.src('./Markdowns/**/*.md')
 		.pipe(gMarkdownToJson(nMarked, 'data.json', (data, file) => {
+			console.log(data.body);
 			let matches = /<li[^>]*>knowledgeid: ([^<]*)<\/li>/.exec(data.body);
 			if (!matches) return data;
 			const knowledgeid = matches[1]
@@ -208,24 +209,24 @@ gulp.task('MD2JSON',function(){
 				  };
 				  break
 				case '6':
-				  const a = myRe_a.exec(data.body)[1]
-				  const b = myRe_b.exec(data.body)[1]
-				  const c = myRe_c.exec(data.body)[1]
-				  const d = myRe_d.exec(data.body)[1]
-				  const answer = myRe_answer.exec(data.body)[1]
-				  const optiontitle = myRe_title.exec(data.body)[1]
+				  const ma = myRe_a.exec(data.body)[1]
+				  const mb = myRe_b.exec(data.body)[1]
+				  const mc = myRe_c.exec(data.body)[1]
+				  const md = myRe_d.exec(data.body)[1]
+				  const manswer = myRe_answer.exec(data.body)[1]
+				  const moptiontitle = myRe_title.exec(data.body)[1]
 				  contents[key] = {
 					  "avatar" : authorid,
 					  "comment_count" : 0,
 					  "content" : {
-							"answer" : answer,
+							"answer" : manswer,
 							"options": {
-								"a" : a,
-								"b" : b,
-								"c" : c,
-								"d" : d
+								"a" : ma,
+								"b" : mb,
+								"c" : mc,
+								"d" : md
 							},
-							"title" : optiontitle,
+							"title" : moptiontitle,
 							"type" : "MultiSelect"
 					  },
 					  "id" : key,
@@ -264,7 +265,7 @@ gulp.task('MD2JSON',function(){
 					  "comment_count" : 0,
 					  "content" : {
 							"flashPath" : flashPath,
-							"type" : "Audio"
+							"type" : "Flash"
 					  },
 					  "id" : key,
 					  "knowledgeid" : knowledgeid,
