@@ -1,0 +1,23 @@
+{
+  "name": "lohmd2n",
+  "version": "1.0.0",
+  "description": "LOH教材制作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "·http://jp.highwayns.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-markdown": "^1.2.0",
+    "gulp-markdown-pdf": "^5.0.0",
+    "gulp-markdown-to-json": "^1.1.0",
+    "marked": "^0.3.6"
+  },
+  "dependencies": {
+    "markdown-it": "^8.4.2",
+    "markdown-js": "0.0.4",
+    "remark": "^10.0.1"
+  }
+}
