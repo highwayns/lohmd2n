@@ -1,5 +1,8 @@
 Angular Document
 ===
+* knowledgeid: -LbW07Cj8C37LDyZeKHF
+* author: test1
+* authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
 
 ## 1.0 Angularへようこそ
 ```
