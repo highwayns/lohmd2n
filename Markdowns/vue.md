@@ -10,7 +10,7 @@ nextTick 可以让我们在下次 DOM 更新循环结束之后执行延迟回调
 
 在 Vue 2.4 之前都是使用的 microtasks，但是 microtasks 的优先级过高，在某些情况下可能会出现比事件冒泡更快的情况，但如果都使用 macrotasks 又可能会出现渲染的性能问题。所以在新版本中，会默认使用 microtasks，但在特殊情况下会使用 macrotasks，比如 v-on。
 
-对于实现 macrotasks ，会先判断是否能使用 `setImmediate` ，不能的话降级为 `MessageChannel` ，以上都不行的话就使用 `setTimeout` 
+对于实现 macrotasks ，会先判断是否能使用 setImmediate ，不能的话降级为 MessageChannel ，以上都不行的话就使用 setTimeout 
 
 js
 if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
@@ -79,7 +79,7 @@ export function nextTick(cb?: Function, ctx?: Object) {
 
 ![](https://user-gold-cdn.xitu.io/2018/7/12/1648d9df78201f07?w=1200&h=3039&f=png&s=50021)
 
-在初始化时，会调用以下代码，生命周期就是通过 `callHook` 调用的
+在初始化时，会调用以下代码，生命周期就是通过 callHook 调用的
 
 js
 Vue.prototype._init = function(options) {
@@ -93,7 +93,7 @@ Vue.prototype._init = function(options) {
     callHook(vm, 'created')
 }
 
-可以发现在以上代码中，`beforeCreate` 调用的时候，是获取不到 props 或者 data 中的数据的，因为这些数据的初始化都在 `initState` 中。
+可以发现在以上代码中，beforeCreate 调用的时候，是获取不到 props 或者 data 中的数据的，因为这些数据的初始化都在 initState 中。
 ```
 
 ## 4.0 挂载函数
@@ -111,7 +111,7 @@ export function mountComponent {
 }
 ```
 
-`beforeMount` 就是在挂载前执行的，然后开始创建 VDOM 并替换成真实 DOM，最后执行 `mounted` 钩子。这里会有个判断逻辑，如果是外部 `new Vue({}) ` 的话，不会存在 `$vnode` ，所以直接执行 ``mounted`` 钩子了。如果有子组件的话，会递归挂载子组件，只有当所有子组件全部挂载完毕，才会执行根组件的挂载钩子。
+beforeMount 就是在挂载前执行的，然后开始创建 VDOM 并替换成真实 DOM，最后执行 mounted 钩子。这里会有个判断逻辑，如果是外部 new Vue({})  的话，不会存在 $vnode ，所以直接执行 mounted 钩子了。如果有子组件的话，会递归挂载子组件，只有当所有子组件全部挂载完毕，才会执行根组件的挂载钩子。
 
 ## 5.0 钩子函数
 ```
@@ -135,8 +135,8 @@ function flushSchedulerQueue() {
         warn(
           'You may have an infinite update loop ' +
             (watcher.user
-              ? `in watcher with expression "${watcher.expression}"`
-              : `in a component render function.`),
+              ? in watcher with expression "${watcher.expression}"
+              : in a component render function.),
           watcher.vm
         )
         break
@@ -160,7 +160,7 @@ function callUpdatedHooks(queue) {
 
 ## 6.0 销毁组件的钩子函数
 ```
-上图还有两个生命周期没有说，分别为 `activated` 和 `deactivated` ，这两个钩子函数是 `keep-alive` 组件独有的。用 `keep-alive` 包裹的组件在切换时不会进行销毁，而是缓存到内存中并执行 `deactivated` 钩子函数，命中缓存渲染后会执行 `actived` 钩子函数。
+上图还有两个生命周期没有说，分别为 activated 和 deactivated ，这两个钩子函数是 keep-alive 组件独有的。用 keep-alive 包裹的组件在切换时不会进行销毁，而是缓存到内存中并执行 deactivated 钩子函数，命中缓存渲染后会执行 actived 钩子函数。
 
 最后就是销毁组件的钩子函数了
 
@@ -205,7 +205,7 @@ Vue.prototype.$destroy = function() {
   }
 }
 
-在执行销毁操作前会调用 `beforeDestroy` 钩子函数，然后进行一系列的销毁操作，如果有子组件的话，也会递归销毁子组件，所有子组件都销毁完毕后才会执行根组件的 `destroyed` 钩子函数。
+在执行销毁操作前会调用 beforeDestroy 钩子函数，然后进行一系列的销毁操作，如果有子组件的话，也会递归销毁子组件，所有子组件都销毁完毕后才会执行根组件的 destroyed 钩子函数。
 ```
 
 ## 7.0 重要函数思维导图
@@ -218,7 +218,7 @@ Vue.prototype.$destroy = function() {
 ```
 在开始之前，推荐大家 clone 一份源码对照着看。因为篇幅较长，函数间的跳转也很多。
 
-使用路由之前，需要调用 `Vue.use(VueRouter)`，这是因为让插件可以使用 Vue 
+使用路由之前，需要调用 Vue.use(VueRouter)，这是因为让插件可以使用 Vue 
 js
 export function initUse (Vue: GlobalAPI) {
   Vue.use = function (plugin: Function | Object) {
@@ -243,7 +243,7 @@ export function initUse (Vue: GlobalAPI) {
 }
 ```
 
-## 9.0 接下来看下 `install` 函数的部分实现
+## 9.0 接下来看下 install 函数的部分实现
 ```
 js
 export function install (Vue) {
@@ -259,7 +259,7 @@ export function install (Vue) {
     }
   }
   // 给每个组件的钩子函数混入实现
-  // 可以发现在 `beforeCreate` 钩子执行时
+  // 可以发现在 beforeCreate 钩子执行时
   // 会初始化路由
   Vue.mixin({
     beforeCreate () {
@@ -288,7 +288,7 @@ export function install (Vue) {
   Vue.component('RouterLink', Link)
 }
 
-对于路由注册来说，核心就是调用 `Vue.use(VueRouter)`，使得 VueRouter 可以使用 Vue。然后通过 Vue 来调用 VueRouter 的 `install` 函数。在该函数中，核心就是给组件混入钩子函数和全局注册两个路由组件。
+对于路由注册来说，核心就是调用 Vue.use(VueRouter)，使得 VueRouter 可以使用 Vue。然后通过 Vue 来调用 VueRouter 的 install 函数。在该函数中，核心就是给组件混入钩子函数和全局注册两个路由组件。
 ```
 
 ## 10.0 VueRouter 实例化
@@ -343,7 +343,7 @@ constructor(options: RouterOptions = {}) {
         break
       default:
         if (process.env.NODE_ENV !== 'production') {
-          assert(false, `invalid mode: ${mode}`)
+          assert(false, invalid mode: ${mode})
         }
     }
   }
@@ -377,12 +377,12 @@ export function createMatcher (
     addRoutes
   }
 }
-`createMatcher` 函数的作用就是创建路由映射表，然后通过闭包的方式让 `addRoutes` 和 `match` 函数能够使用路由映射表的几个对象，最后返回一个 `Matcher` 对象。
+createMatcher 函数的作用就是创建路由映射表，然后通过闭包的方式让 addRoutes 和 match 函数能够使用路由映射表的几个对象，最后返回一个 Matcher 对象。
 ```
 
 ## 13.0 创建映射表
 ```
-接下来看 `createMatcher` 函数时如何创建映射表的
+接下来看 createMatcher 函数时如何创建映射表的
 js
 export function createRouteMap (
   routes: Array<RouteConfig>,
@@ -457,7 +457,7 @@ function addRouteRecord (
     // 递归路由配置的 children 属性，添加路由记录
     route.children.forEach(child => {
       const childMatchAs = matchAs
-        ? cleanPath(`${matchAs}/${child.path}`)
+        ? cleanPath(${matchAs}/${child.path})
         : undefined
       addRouteRecord(pathList, pathMap, nameMap, child, record, childMatchAs)
     })
@@ -496,8 +496,8 @@ function addRouteRecord (
     } else if (process.env.NODE_ENV !== 'production' && !matchAs) {
       warn(
         false,
-        `Duplicate named routes definition: ` +
-        `{ name: "${name}", path: "${record.path}" }`
+        Duplicate named routes definition:  +
+        { name: "${name}", path: "${record.path}" }
       )
     }
   }
@@ -507,7 +507,7 @@ function addRouteRecord (
 
 ## 14.0 路由初始化
 ```
-当根组件调用 `beforeCreate` 钩子函数时，会执行以下代码
+当根组件调用 beforeCreate 钩子函数时，会执行以下代码
 js
 beforeCreate () {
 // 只有根组件有 router 属性，所以根组件初始化时会初始化路由
@@ -521,9 +521,9 @@ beforeCreate () {
   }
   registerInstance(this, this)
 }
-```
+
 接下来看下路由初始化会做些什么
-```js
+js
 init(app: any /* Vue component instance */) {
     // 保存组件实例
     this.apps.push(app)
@@ -630,7 +630,7 @@ function match (
       }
     }
     if (record) {
-      location.path = fillParams(record.path, location.params, `named route "${name}"`)
+      location.path = fillParams(record.path, location.params, named route "${name}")
       return _createRoute(record, location, redirectedFrom)
     }
   } else if (location.path) {
@@ -713,7 +713,7 @@ function formatMatch(record: ?RouteRecord): Array<RouteRecord> {
 
 ## 18.0 Transition
 ```
-至此匹配路由已经完成，我们回到 `transitionTo` 函数中，接下来执行 `confirmTransition` 
+至此匹配路由已经完成，我们回到 transitionTo 函数中，接下来执行 confirmTransition 
 js
 transitionTo (location: RawLocation, onComplete?: Function, onAbort?: Function) {
   // 确认切换路由
@@ -955,12 +955,12 @@ function registerHook(list: Array<any>, fn: Function): Function {
 
 ## 22.0 beforeRouteUpdate
 ```
-第三步执行 `beforeRouteUpdate` 钩子函数，调用方式和第一步相同，只是传入的函数名不同，在该函数中可以访问到 `this` 对象。
+第三步执行 beforeRouteUpdate 钩子函数，调用方式和第一步相同，只是传入的函数名不同，在该函数中可以访问到 this 对象。
 ```
 
 ## 23.0 beforeEnter
 ```
-第四步执行 `beforeEnter` 钩子函数，该函数是路由独享的钩子函数。
+第四步执行 beforeEnter 钩子函数，该函数是路由独享的钩子函数。
 ```
 
 ## 24.0 解析异步组件
@@ -999,7 +999,7 @@ export function resolveAsyncComponents (matched: Array<RouteRecord>): Function {
         })
         // 失败回调
         const reject = once(reason => {
-          const msg = `Failed to resolve async component ${key}: ${reason}`
+          const msg = Failed to resolve async component ${key}: ${reason}
           process.env.NODE_ENV !== 'production' && warn(false, msg)
           if (!error) {
             error = isError(reason)
@@ -1034,11 +1034,11 @@ export function resolveAsyncComponents (matched: Array<RouteRecord>): Function {
 }
 ```
 
-## 25.0 保存 `beforeRouteEnter` 钩子中的回调函数
+## 25.0 保存 beforeRouteEnter 钩子中的回调函数
 ```
-以上就是第一个 `runQueue` 中的逻辑，第五步完成后会执行第一个 `runQueue` 中回调函数
+以上就是第一个 runQueue 中的逻辑，第五步完成后会执行第一个 runQueue 中回调函数
 js
-// 该回调用于保存 `beforeRouteEnter` 钩子中的回调函数
+// 该回调用于保存 beforeRouteEnter 钩子中的回调函数
 const postEnterCbs = []
 const isValid = () => this.current === route
 // beforeRouteEnter 导航守卫钩子
@@ -1062,17 +1062,17 @@ runQueue(queue, iterator, () => {
 })
 ```
 
-## 26.0 `beforeRouteEnter` 导航守卫钩子
+## 26.0 beforeRouteEnter 导航守卫钩子
 ```
-第六步是执行 `beforeRouteEnter` 导航守卫钩子，`beforeRouteEnter` 钩子不能访问 `this` 对象，因为钩子在导航确认前被调用，需要渲染的组件还没被创建。但是该钩子函数是唯一一个支持在回调中获取 `this` 对象的函数，回调会在路由确认执行。
+第六步是执行 beforeRouteEnter 导航守卫钩子，beforeRouteEnter 钩子不能访问 this 对象，因为钩子在导航确认前被调用，需要渲染的组件还没被创建。但是该钩子函数是唯一一个支持在回调中获取 this 对象的函数，回调会在路由确认执行。
 js
 beforeRouteEnter (to, from, next) {
   next(vm => {
-    // 通过 `vm` 访问组件实例
+    // 通过 vm 访问组件实例
   })
 }
 
-下面来看看是如何支持在回调中拿到 `this` 对象的
+下面来看看是如何支持在回调中拿到 this 对象的
 js
 function extractEnterGuards(
   activated: Array<RouteRecord>,
@@ -1132,14 +1132,14 @@ function poll(
 }
 ```
 
-## 27.0 `beforeResolve` 导航守卫钩子
+## 27.0 beforeResolve 导航守卫钩子
 ```
-第七步是执行 `beforeResolve` 导航守卫钩子，如果注册了全局 `beforeResolve` 钩子就会在这里执行。
+第七步是执行 beforeResolve 导航守卫钩子，如果注册了全局 beforeResolve 钩子就会在这里执行。
 ```
 
-## 28.0 调用 `afterEach` 导航守卫钩子
+## 28.0 调用 afterEach 导航守卫钩子
 ```
-第八步就是导航确认，调用 `afterEach` 导航守卫钩子了。
+第八步就是导航确认，调用 afterEach 导航守卫钩子了。
 ```
 
 ## 29.0 触发组件的渲染
@@ -1155,7 +1155,7 @@ history.listen(route => {
 
 ## 30.0 updateRoute
 ```
-以上回调会在 `updateRoute` 中调用
+以上回调会在 updateRoute 中调用
 js
 updateRoute(route: Route) {
     const prev = this.current
