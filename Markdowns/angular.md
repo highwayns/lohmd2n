@@ -966,3 +966,667 @@ this.http.request(request).subscribe(event => {
 リクエスト先 URL が相対パス
 であるリクエストに適用されます。
 ```
+
+## 59.0 Observable
+```
+Observableは、アプリケーションの中でパブリッシャーとサブスクライバー間でメッセージ
+を渡すためのサポートを提供します。Observableは、イベント処理、非同期プログラミング、
+および複数の値の処理のための他のテクニックよりも大きな利点を提供します。
+Observableは宣言的です—つまり、値を公開するための関数を定義しますが、コンシューマー
+がそれを購読するまでは実行されません。購読するコンシューマーは、機能が完了するまで、
+または購読を中止するまで通知を受け取ります。
+Observableは、文脈に応じて、任意の型—リテラル、メッセージ、またはイベントの複数の値
+を提供できます。受け取るためのAPIは値が同期的・非同期的に提供される場合も同じです。
+基本的なセットアップとティアダウンはObservableによって処理されるので、あなたの
+アプリケーションコードは値を消費するためにサブスクライブを行うことと、それが済んだら
+購読を中止することだけを心配する必要があります。ストリームがキー入力、HTTPレスポンス、
+インターバルタイマーのどれでも、値をリスニングしたり、リスニングを止めるためのインター
+フェースは同じです。
+これらの利点のために、ObservableはAngular内で広く使用されており、アプリの開発にも推
+奨されています。
+```
+
+## 60.0 ジオロケーションのアップデートを監視する
+```
+// Create an Observable that will start listening to geolocation updates
+// when a consumer subscribes.
+const locations = new Observable((observer) => {
+  // Get the next and error callbacks. These will be passed in when
+  // the consumer subscribes.
+  const {next, error} = observer;
+  let watchId;
+ 
+  // Simple geolocation API check provides values to publish
+  if ('geolocation' in navigator) {
+    watchId = navigator.geolocation.watchPosition(next, error);
+  } else {
+    error('Geolocation not available');
+  }
+ 
+  // When the consumer unsubscribes, clean up data ready for next subscription.
+  return {unsubscribe() { navigator.geolocation.clearWatch(watchId); }};
+});
+ 
+// Call subscribe() to start listening for updates.
+const locationsSubscription = locations.subscribe({
+  next(position) { console.log('Current Position: ', position); },
+  error(msg) { console.log('Error Getting Location: ', msg); }
+});
+ 
+// Stop listening for location after 10 seconds
+setTimeout(() => { locationsSubscription.unsubscribe(); }, 10000);
+
+next
+必須です。個々の値が提供されたときのハンドラーです。実行が開始されてから0回以上呼び出されます。
+error
+オプションです。エラー通知のハンドラーです。エラーはObservableインスタンスの実行を停止します。
+complete
+オプションです。実行完了通知のハンドラーです。遅延した値は、実行完了後もnextハンドラーに引き続き渡されます。
+```
+
+## 61.0 サブスクライブ
+```
+Subscribe using observer
+    // Create simple observable that emits three values
+    const myObservable = of(1, 2, 3);
+    
+    // Create observer object
+    const myObserver = {
+    next: x => console.log('Observer got a next value: ' + x),
+    error: err => console.error('Observer got an error: ' + err),
+    complete: () => console.log('Observer got a complete notification'),
+    };
+    
+    // Execute with the observer object
+    myObservable.subscribe(myObserver);
+    // Logs:
+    // Observer got a next value: 1
+    // Observer got a next value: 2
+    // Observer got a next value: 3
+    // Observer got a complete notification
+Subscribe with positional arguments
+    myObservable.subscribe(
+    x => console.log('Observer got a next value: ' + x),
+    err => console.error('Observer got an error: ' + err),
+    () => console.log('Observer got a complete notification')
+    );
+```
+
+## 62.0 Observableを作成する
+```
+Create observable with constructor
+    // This function runs when subscribe() is called
+    function sequenceSubscriber(observer) {
+    // synchronously deliver 1, 2, and 3, then complete
+    observer.next(1);
+    observer.next(2);
+    observer.next(3);
+    observer.complete();
+    
+    // unsubscribe function doesn't need to do anything in this
+    // because values are delivered synchronously
+    return {unsubscribe() {}};
+    }
+    
+    // Create a new Observable that will deliver the above sequence
+    const sequence = new Observable(sequenceSubscriber);
+    
+    // execute the Observable and print the result of each notification
+    sequence.subscribe({
+    next(num) { console.log(num); },
+    complete() { console.log('Finished sequence'); }
+    });
+    
+    // Logs:
+    // 1
+    // 2
+    // 3
+    // Finished sequence
+Create with custom fromEvent function
+    function fromEvent(target, eventName) {
+    return new Observable((observer) => {
+        const handler = (e) => observer.next(e);
+    
+        // Add the event handler to the target
+        target.addEventListener(eventName, handler);
+    
+        return () => {
+        // Detach the event handler from the target
+        target.removeEventListener(eventName, handler);
+        };
+    });
+    }
+Use custom fromEvent function
+    const ESC_KEY = 27;
+    const nameInput = document.getElementById('name') as HTMLInputElement;
+
+    const subscription = fromEvent(nameInput, 'keydown')
+    .subscribe((e: KeyboardEvent) => {
+        if (e.keyCode === ESC_KEY) {
+        nameInput.value = '';
+        }
+    });
+```
+
+## 63.0 マルチキャスト
+```
+典型的なObservableは、サブスクライブしたオブザーバーごとに独立した新しい実行を作成します。
+オブザーバーが購読すると、Observableはイベントハンドラーをつなぎ、そのオブザーバーに値を
+渡します。2つ目のオブザーバーが加入すると、Observableは新しいイベントハンドラーをつなぎ、
+別の実行でその2つ目のオブザーバーに値を渡します。
+場合によっては、各サブスクライバーに対して独立した実行を開始するのではなく各サブスクリプ
+ションが同じ値を取得するようにしたいことがあるでしょう—値の発行がすでに始まっていたとして
+も。これは、ドキュメントオブジェクトのクリックを監視するような場合に当てはまります。
+マルチキャスト は、1回の実行で複数のサブスクライバーにブロードキャストする方法です。マルチ
+キャストをするObservableの場合、ドキュメントに複数のリスナーを登録するのではなく、最初
+のリスナーを再利用して値を各サブスクライバーに送信します。
+Observableを作成するときは、そのObservableをどのように使用するか、およびその値をマルチキ
+ャストするかどうかを決定する必要があります。
+個々の数値が発信されてから1秒遅れて、1から3までカウントする例を見てみましょう。
+```
+
+## 64.0 Create a delayed sequence
+```
+function sequenceSubscriber(observer) {
+  const seq = [1, 2, 3];
+  let timeoutId;
+ 
+  // Will run through an array of numbers, emitting one value
+  // per second until it gets to the end of the array.
+  function doSequence(arr, idx) {
+    timeoutId = setTimeout(() => {
+      observer.next(arr[idx]);
+      if (idx === arr.length - 1) {
+        observer.complete();
+      } else {
+        doSequence(arr, ++idx);
+      }
+    }, 1000);
+  }
+ 
+  doSequence(seq, 0);
+ 
+  // Unsubscribe should clear the timeout to stop execution
+  return {unsubscribe() {
+    clearTimeout(timeoutId);
+  }};
+}
+ 
+// Create a new Observable that will deliver the above sequence
+const sequence = new Observable(sequenceSubscriber);
+ 
+sequence.subscribe({
+  next(num) { console.log(num); },
+  complete() { console.log('Finished sequence'); }
+});
+ 
+// Logs:
+// (at 1 second): 1
+// (at 2 seconds): 2
+// (at 3 seconds): 3
+// (at 3 seconds): Finished sequence
+```
+
+## 65.0 Two subscriptions
+```
+// Subscribe starts the clock, and will emit after 1 second
+sequence.subscribe({
+  next(num) { console.log('1st subscribe: ' + num); },
+  complete() { console.log('1st sequence finished.'); }
+});
+ 
+// After 1/2 second, subscribe again.
+setTimeout(() => {
+  sequence.subscribe({
+    next(num) { console.log('2nd subscribe: ' + num); },
+    complete() { console.log('2nd sequence finished.'); }
+  });
+}, 500);
+ 
+// Logs:
+// (at 1 second): 1st subscribe: 1
+// (at 1.5 seconds): 2nd subscribe: 1
+// (at 2 seconds): 1st subscribe: 2
+// (at 2.5 seconds): 2nd subscribe: 2
+// (at 3 seconds): 1st subscribe: 3
+// (at 3 seconds): 1st sequence finished
+// (at 3.5 seconds): 2nd subscribe: 3
+// (at 3.5 seconds): 2nd sequence finished
+```
+
+## 66.0 Create a multicast subscriber
+```
+function multicastSequenceSubscriber() {
+  const seq = [1, 2, 3];
+  // Keep track of each observer (one for every active subscription)
+  const observers = [];
+  // Still a single timeoutId because there will only ever be one
+  // set of values being generated, multicasted to each subscriber
+  let timeoutId;
+ 
+  // Return the subscriber function (runs when subscribe()
+  // function is invoked)
+  return (observer) => {
+    observers.push(observer);
+    // When this is the first subscription, start the sequence
+    if (observers.length === 1) {
+      timeoutId = doSequence({
+        next(val) {
+          // Iterate through observers and notify all subscriptions
+          observers.forEach(obs => obs.next(val));
+        },
+        complete() {
+          // Notify all complete callbacks
+          observers.slice(0).forEach(obs => obs.complete());
+        }
+      }, seq, 0);
+    }
+ 
+    return {
+      unsubscribe() {
+        // Remove from the observers array so it's no longer notified
+        observers.splice(observers.indexOf(observer), 1);
+        // If there's no more listeners, do cleanup
+        if (observers.length === 0) {
+          clearTimeout(timeoutId);
+        }
+      }
+    };
+  };
+}
+ 
+// Run through an array of numbers, emitting one value
+// per second until it gets to the end of the array.
+function doSequence(observer, arr, idx) {
+  return setTimeout(() => {
+    observer.next(arr[idx]);
+    if (idx === arr.length - 1) {
+      observer.complete();
+    } else {
+      doSequence(observer, arr, ++idx);
+    }
+  }, 1000);
+}
+ 
+// Create a new Observable that will deliver the above sequence
+const multicastSequence = new Observable(multicastSequenceSubscriber());
+ 
+// Subscribe starts the clock, and begins to emit after 1 second
+multicastSequence.subscribe({
+  next(num) { console.log('1st subscribe: ' + num); },
+  complete() { console.log('1st sequence finished.'); }
+});
+ 
+// After 1 1/2 seconds, subscribe again (should "miss" the first value).
+setTimeout(() => {
+  multicastSequence.subscribe({
+    next(num) { console.log('2nd subscribe: ' + num); },
+    complete() { console.log('2nd sequence finished.'); }
+  });
+}, 1500);
+ 
+// Logs:
+// (at 1 second): 1st subscribe: 1
+// (at 2 seconds): 1st subscribe: 2
+// (at 2 seconds): 2nd subscribe: 2
+// (at 3 seconds): 1st subscribe: 3
+// (at 3 seconds): 1st sequence finished
+// (at 3 seconds): 2nd subscribe: 3
+// (at 3 seconds): 2nd sequence finished
+```
+
+## 67.0 RxJS ライブラリ
+```
+RxJS は Observable 型の実装を提供します。Observable 型は、型が言語の
+一部となるまで、そしてブラウザがそれをサポートするまで必要です。ライブラリ
+はまたobservablesを作成して作業するためのユーティリティ関数を提供します。
+これらのユーティリティ関数は、次の用途に使用できます。
+ 非同期処理の既存のコードを observables に変換する
+ ストリーム内の値を反復処理する
+ 異なる型への値のマッピング
+ ストリームのフィルタリング
+ 複数のストリームの作成
+```
+
+## 68.0 Observable 作成関数
+```
+promise から observable を作成する
+    import { from } from 'rxjs';
+
+    // Create an Observable out of a promise
+    const data = from(fetch('/api/endpoint'));
+    // Subscribe to begin listening for async result
+    data.subscribe({
+    next(response) { console.log(response); },
+    error(err) { console.error('Error: ' + err); },
+    complete() { console.log('Completed'); }
+    });
+カウンターから observable を作成する
+    import { interval } from 'rxjs';
+
+    // Create an Observable that will publish a value on an interval
+    const secondsCounter = interval(1000);
+    // Subscribe to begin publishing values
+    secondsCounter.subscribe(n =>
+    console.log(`It's been ${n} seconds since subscribing!`));
+イベントから observable を作成する
+    import { fromEvent } from 'rxjs';
+    
+    const el = document.getElementById('my-element');
+    
+    // Create an Observable that will publish mouse movements
+    const mouseMoves = fromEvent(el, 'mousemove');
+    
+    // Subscribe to start listening for mouse-move events
+    const subscription = mouseMoves.subscribe((evt: MouseEvent) => {
+    // Log coords of mouse movements
+    console.log(`Coords: ${evt.clientX} X ${evt.clientY}`);
+    
+    // When the mouse is over the upper-left of the screen,
+    // unsubscribe to stop listening for mouse movements
+    if (evt.clientX < 40 && evt.clientY < 40) {
+        subscription.unsubscribe();
+    }
+    });
+AJAX リクエストから observable を作成する
+    import { ajax } from 'rxjs/ajax';
+
+    // Create an Observable that will create an AJAX request
+    const apiData = ajax('/api/data');
+    // Subscribe to create the request
+    apiData.subscribe(res => console.log(res.status, res.response));
+```
+
+## 69.0 オペレーター
+```
+Map operator
+    import { map } from 'rxjs/operators';
+    
+    const nums = of(1, 2, 3);
+    
+    const squareValues = map((val: number) => val * val);
+    const squaredNums = squareValues(nums);
+    
+    squaredNums.subscribe(x => console.log(x));
+    
+    // Logs
+    // 1
+    // 4
+    // 9
+Standalone pipe function
+    import { filter, map } from 'rxjs/operators';
+    
+    const nums = of(1, 2, 3, 4, 5);
+    
+    // Create a function that accepts an Observable.
+    const squareOddVals = pipe(
+    filter((n: number) => n % 2 !== 0),
+    map(n => n * n)
+    );
+    
+    // Create an Observable that will run the filter and map functions
+    const squareOdd = squareOddVals(nums);
+    
+    // Suscribe to run the combined functions
+    squareOdd.subscribe(x => console.log(x));
+Observable.pipe function
+    import { filter, map } from 'rxjs/operators';
+
+    const squareOdd = of(1, 2, 3, 4, 5)
+    .pipe(
+        filter(n => n % 2 !== 0),
+        map(n => n * n)
+    );
+
+    // Subscribe to get values
+    squareOdd.subscribe(x => console.log(x));
+```
+
+## 70.0 catchError オペレーター
+```
+import { ajax } from 'rxjs/ajax';
+import { map, catchError } from 'rxjs/operators';
+// Return "response" from the API. If an error happens,
+// return an empty array.
+const apiData = ajax('/api/data').pipe(
+  map(res => {
+    if (!res.response) {
+      throw new Error('Value expected!');
+    }
+    return res.response;
+  }),
+  catchError(err => of([]))
+);
+ 
+apiData.subscribe({
+  next(x) { console.log('data: ', x); },
+  error(err) { console.log('errors already caught... will not run'); }
+});
+```
+
+## 71.0 失敗した observable の再実行
+```
+import { ajax } from 'rxjs/ajax';
+import { map, retry, catchError } from 'rxjs/operators';
+ 
+const apiData = ajax('/api/data').pipe(
+  retry(3), // Retry up to 3 times before failing
+  map(res => {
+    if (!res.response) {
+      throw new Error('Value expected!');
+    }
+    return res.response;
+  }),
+  catchError(err => of([]))
+);
+ 
+apiData.subscribe({
+  next(x) { console.log('data: ', x); },
+  error(err) { console.log('errors already caught... will not run'); }
+});
+```
+
+## 72.0 Naming observables
+```
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+ 
+@Component({
+  selector: 'app-stopwatch',
+  templateUrl: './stopwatch.component.html'
+})
+export class StopwatchComponent {
+ 
+  stopwatchValue: number;
+  stopwatchValue$: Observable<number>;
+ 
+  start() {
+    this.stopwatchValue$.subscribe(num =>
+      this.stopwatchValue = num
+    );
+  }
+}
+```
+
+## 73.0 Angular での Observable
+```
+Angular はさまざまな一般的な非同期操作を処理するためのインターフェースとして 
+Observable を使用します。たとえば：
+EventEmitter クラスは Observable を拡張しています。
+HTTP モジュールは Observable を使用して AJAX リクエストとレスポンスを処理
+します。
+Router と Form モジュールは、ユーザー入力イベントを待ち受けてレスポンスする
+ために Observable を使用します。
+```
+
+## 74.0 EventEmitter
+```
+@Component({
+  selector: 'zippy',
+  template: `
+  <div class="zippy">
+    <div (click)="toggle()">Toggle</div>
+    <div [hidden]="!visible">
+      <ng-content></ng-content>
+    </div>
+  </div>`})
+ 
+export class ZippyComponent {
+  visible = true;
+  @Output() open = new EventEmitter<any>();
+  @Output() close = new EventEmitter<any>();
+ 
+  toggle() {
+    this.visible = !this.visible;
+    if (this.visible) {
+      this.open.emit(null);
+    } else {
+      this.close.emit(null);
+    }
+  }
+}
+```
+
+## 75.0 HTTP
+```
+ngularの HttpClient は、HTTPメソッド呼び出しからの Observable を返します。
+たとえば、http.get(‘/api’) は Observable オブジェクトを返します。これは、
+Promise ベースの HTTP API に勝るいくつかの利点を提供します。
+Observables はサーバーのレスポンスを変更しません(Promise で .then() の呼び
+出しによって発生する可能性があります)。代わりに、必要に応じて一連のオペレータ
+ーを使用して値を変換することができます。
+HTTP リクエストは unsubscribe() メソッドで取り消すことができます。
+イベントの更新の進行状況を取得するようにリクエストを構成できます。
+失敗したリクエストは簡単に再試行できます。
+```
+
+## 76.0 非同期パイプの使用
+```
+@Component({
+  selector: 'async-observable-pipe',
+  template: `<div><code>observable|async</code>:
+       Time: {{ time | async }}</div>`
+})
+export class AsyncObservablePipeComponent {
+  time = new Observable(observer =>
+    setInterval(() => observer.next(new Date().toString()), 1000)
+  );
+}
+```
+
+## 77.0 ルーターイベント
+```
+import { Router, NavigationStart } from '@angular/router';
+import { filter } from 'rxjs/operators';
+ 
+@Component({
+  selector: 'app-routable',
+  templateUrl: './routable.component.html',
+  styleUrls: ['./routable.component.css']
+})
+export class Routable1Component implements OnInit {
+ 
+  navStart: Observable<NavigationStart>;
+ 
+  constructor(private router: Router) {
+    // Create a new Observable that publishes only the NavigationStart event
+    this.navStart = router.events.pipe(
+      filter(evt => evt instanceof NavigationStart)
+    ) as Observable<NavigationStart>;
+  }
+ 
+  ngOnInit() {
+    this.navStart.subscribe(evt => console.log('Navigation Started!'));
+  }
+}
+```
+
+## 78.0 ActivatedRoute
+```
+import { ActivatedRoute } from '@angular/router';
+ 
+@Component({
+  selector: 'app-routable',
+  templateUrl: './routable.component.html',
+  styleUrls: ['./routable.component.css']
+})
+export class Routable2Component implements OnInit {
+  constructor(private activatedRoute: ActivatedRoute) {}
+ 
+  ngOnInit() {
+    this.activatedRoute.url
+      .subscribe(url => console.log('The URL changed to: ' + url));
+  }
+}
+```
+
+## 79.0 リアクティブフォーム
+```
+import { FormGroup } from '@angular/forms';
+ 
+@Component({
+  selector: 'my-component',
+  template: 'MyComponent Template'
+})
+export class MyComponent implements OnInit {
+  nameChangeLog: string[] = [];
+  heroForm: FormGroup;
+ 
+  ngOnInit() {
+    this.logNameChange();
+  }
+  logNameChange() {
+    const nameControl = this.heroForm.get('name');
+    nameControl.valueChanges.forEach(
+      (value: string) => this.nameChangeLog.push(value)
+    );
+  }
+}
+```
+
+## 80.0 事前サジェスト
+```
+import { fromEvent } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { map, filter, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+ 
+const searchBox = document.getElementById('search-box');
+ 
+const typeahead = fromEvent(searchBox, 'input').pipe(
+  map((e: KeyboardEvent) => e.target.value),
+  filter(text => text.length > 2),
+  debounceTime(10),
+  distinctUntilChanged(),
+  switchMap(() => ajax('/api/endpoint'))
+);
+ 
+typeahead.subscribe(data => {
+ // Handle the data from the API
+});
+```
+
+## 81.0 指数関数的バックオフ
+```
+import { pipe, range, timer, zip } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { retryWhen, map, mergeMap } from 'rxjs/operators';
+ 
+function backoff(maxTries, ms) {
+ return pipe(
+   retryWhen(attempts => zip(range(1, maxTries), attempts)
+     .pipe(
+       map(([i]) => i * i),
+       mergeMap(i =>  timer(i * ms))
+     )
+   )
+ );
+}
+ 
+ajax('/api/endpoint')
+  .pipe(backoff(3, 250))
+  .subscribe(data => handleData(data));
+ 
+function handleData(data) {
+  // ...
+}
+```
