@@ -1,3 +1,9 @@
+Spring Framework Document
+===
+* knowledgeid: -LdLv2K4G35jI5thkNgR
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 Springプロジェクトの作成
 ```
 Spring Frameworkの開発元（米Pivotal）では、Spring 
@@ -2075,7 +2081,8 @@ mailから探すなら「findByMail」となるわけです。
 
 ●StartingWith/EndingWith
 テキストの値で、引数に指定したテキストで始まるもの、あるいは
-終わるものを検索するためのものです。「findByNameStartingWith("A")」なら、nameの値が"A"で始まる
+終わるものを検索するためのものです。「findByNameStartingWith("A")」
+なら、nameの値が"A"で始まる
 ものを検索します。
 
 ●IsNull/IsNotNull
@@ -2112,3 +2119,6 @@ trueのものだけを検索します。
 なデータ検索ができるようになります。非常に簡単ですので、サン
 プルをベースにいろいろと試してみてください
 ```
+
+## 55.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

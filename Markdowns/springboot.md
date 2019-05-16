@@ -1,8 +1,8 @@
 Springboot Document
 ===
-* knowledgeid: -LbW07Cj8C37LDyZeKHF
-* author: test1
-* authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
+* knowledgeid: -LdLtODpcc-J83q1aU5f
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
 ## 1.0 JSONを返す
 ```
@@ -11,7 +11,7 @@ Spring Boot を使って、サーバサイドから JSON を返却する方法�
 http://localhost:8080/hello
 次のレスポンスを返す例を書いていきます。
 {"message":"Hello, World!"}
-``` 
+```
 
 ## 2.0 環境・ツール
 ```
@@ -361,7 +361,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class FileUploadController {
     
-  // 引数名 `file` は、ファイルのリクエストパラメータ名と一致させる。
+  // 引数名 file は、ファイルのリクエストパラメータ名と一致させる。
   @RequestMapping(value="/upload", method=RequestMethod.POST)
   public void handle(
     HttpServletResponse response,
@@ -1145,3 +1145,6 @@ gssb > mvn spring-boot:run
 http://localhost:8080/health にアクセスすると、システムの状態を受け取ることができます。
 {"status":"UP"}
 ```
+
+## 64.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

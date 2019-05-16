@@ -328,12 +328,12 @@ gulp.task('MergeJSON',function(){
 // Watching
 
 gulp.task('watching',function(){
-	gulp.watch('./Markdowns/**/*.md',['MD2HTML','MD2JSON','MD2PDF','MergeJSON']);
+	gulp.watch('./Markdowns/**/*.md',['MD2HTML','MD2JSON','MD2PDF']);
 });
 
 // Default
 
-gulp.task('default',['MD2HTML','MD2JSON','MD2PDF','MergeJSON']);
+gulp.task('default',['MD2HTML','MD2JSON','MD2PDF']);
 
 // Download from firebase
 gulp.task('DownloadData', function(){
