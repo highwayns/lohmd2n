@@ -1,5 +1,8 @@
 Framework7 Study Guildline
 ===
+* knowledgeid: -LdLtaiBADqiIat-6k_3
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
 ## 1.0 App HTML Layout
 ```
@@ -587,136 +590,136 @@ Examples
 
 ## 16.0 Chip Vue Component
 ```
-<!-- Simple Chip -->
-<f7-chip text="Example Chip"></f7-chip>
+  <!-- Simple Chip -->
+  <f7-chip text="Example Chip"></f7-chip>
 
-<!-- Colored Chip -->
-<f7-chip text="Another Chip" color="red"></f7-chip>
+  <!-- Colored Chip -->
+  <f7-chip text="Another Chip" color="red"></f7-chip>
 
-<!-- Media Chip -->
-<f7-chip text="Jane Doe" media="J" media-bg-color="red"></f7-chip>
+  <!-- Media Chip -->
+  <f7-chip text="Jane Doe" media="J" media-bg-color="red"></f7-chip>
 
-<!-- Deleteable Chip -->
-<f7-chip text="Another Chip" deleteable @delete="onChipDelete"></f7-chip>
+  <!-- Deleteable Chip -->
+  <f7-chip text="Another Chip" deleteable @delete="onChipDelete"></f7-chip>
 
-<!-- Deleteable Media Chip -->
-<f7-chip text="Jane Doe" media-bg="red" deleteable @delete="onChipDelete">
-  <img slot="media" src="http://lorempixel.com/100/100/people/9/">
-</f7-chip>
+  <!-- Deleteable Media Chip -->
+  <f7-chip text="Jane Doe" media-bg="red" deleteable @delete="onChipDelete">
+    <img slot="media" src="http://lorempixel.com/100/100/people/9/">
+  </f7-chip>
 
-<!-- With Icon -->
-<f7-chip text="Add Contact" color="blue">
-  <f7-icon slot="media" f7="add_round"></f7-icon>
-</f7-chip>
+  <!-- With Icon -->
+  <f7-chip text="Add Contact" color="blue">
+    <f7-icon slot="media" f7="add_round"></f7-icon>
+  </f7-chip>
 ```
 
 ## 17.0 Contacts List Vue Component
 ```
-<template>
-  <f7-page>
-    <f7-navbar back-link="Back" title="Contacts" sliding></f7-navbar>
+  <template>
+    <f7-page>
+      <f7-navbar back-link="Back" title="Contacts" sliding></f7-navbar>
 
-    <f7-list contacts-list>
-      <f7-list-group v-for="(group, key) in contacts">
-        <f7-list-item :title="key" group-title></f7-list-item>
-        <f7-list-item v-for="name in group" :title="name"></f7-list-item>
-      </f7-list-group>
-    </f7-list>
+      <f7-list contacts-list>
+        <f7-list-group v-for="(group, key) in contacts">
+          <f7-list-item :title="key" group-title></f7-list-item>
+          <f7-list-item v-for="name in group" :title="name"></f7-list-item>
+        </f7-list-group>
+      </f7-list>
 
-  </f7-page>
-</template>
-<script>
-  export default {
-    data: function () {
-      return {
-        contacts: {
-          'A': [
-            'Aaron',
-            'Abbie',
-            'Adam',
-            'Adele',
-            'Agatha',
-            'Agnes',
-            'Albert',
-            'Alexander'
-          ],
-          'B': [
-            'Bailey',
-            'Barclay',
-            'Bartolo',
-            'Bellamy',
-            'Belle',
-            'Benjamin'
-          ],
-          'C': [
-            'Caiden',
-            'Calvin',
-            'Candy',
-            'Carl',
-            'Cherilyn',
-            'Chester',
-            'Chloe'
-          ],
-          'V': [
-            'Vladimir'
-          ]
+    </f7-page>
+  </template>
+  <script>
+    export default {
+      data: function () {
+        return {
+          contacts: {
+            'A': [
+              'Aaron',
+              'Abbie',
+              'Adam',
+              'Adele',
+              'Agatha',
+              'Agnes',
+              'Albert',
+              'Alexander'
+            ],
+            'B': [
+              'Bailey',
+              'Barclay',
+              'Bartolo',
+              'Bellamy',
+              'Belle',
+              'Benjamin'
+            ],
+            'C': [
+              'Caiden',
+              'Calvin',
+              'Candy',
+              'Carl',
+              'Cherilyn',
+              'Chester',
+              'Chloe'
+            ],
+            'V': [
+              'Vladimir'
+            ]
+          }
         }
       }
     }
-  }
-</script>
+  </script>
 ```
 
 ## 18.0 Floating Action Button Vue Component
 ```
-Default FAB
-<f7-page>
-  <!-- FAB must be direct child of a page -->
-  <f7-fab color="pink" @click="doSomething">
-    <f7-icon f7="add"></f7-icon>
-  </f7-fab>
+  Default FAB
+  <f7-page>
+    <!-- FAB must be direct child of a page -->
+    <f7-fab color="pink" @click="doSomething">
+      <f7-icon f7="add"></f7-icon>
+    </f7-fab>
+    ...
+  </f7-page>
+  Renders to:
   ...
-</f7-page>
-Renders to:
-...
-<div class="fab fab-right-bottom color-pink">
-  <a href="#">
-    <i class="icon f7-icons">add</i>
-  </a>
-</div>
-...
-Speed Dial
-<f7-page>
-  <!-- FAB must be direct child of a page -->
-  <f7-fab color="pink" @click="doSomething">
-    <!-- First icon is visible when Speed Dial actions are closed -->
-    <f7-icon f7="add"></f7-icon>
-    <!-- Second icon is visible when Speed Dial actions are opened -->
-    <f7-icon f7="close"></f7-icon>
-
-    <!-- Speed Dial Buttons -->
-    <f7-fab-buttons>
-      <f7-fab-button color="orange" @click="onButtonClick">A</f7-fab-button>
-      <f7-fab-button color="green" @click="onButtonClick">B</f7-fab-button>
-      <f7-fab-button color="blue" @click="onButtonClick">C</f7-fab-button>
-    </f7-fab-buttons>
-  </f7-fab>
-  ...
-</f7-page>
-Renders to:
-...
-<div class="fab fab-right-bottom color-pink">
-  <a href="#">
-    <i class="icon f7-icons">add</i>
-    <i class="icon f7-icons">close</i>
-  </a>
-  <div class="fab-buttons fab-buttons-top">
-    <a href="#" class="color-orange">A</a>
-    <a href="#" class="color-green">B</a>
-    <a href="#" class="color-blue">C</a>
+  <div class="fab fab-right-bottom color-pink">
+    <a href="#">
+      <i class="icon f7-icons">add</i>
+    </a>
   </div>
-</div>
-...
+  ...
+  Speed Dial
+  <f7-page>
+    <!-- FAB must be direct child of a page -->
+    <f7-fab color="pink" @click="doSomething">
+      <!-- First icon is visible when Speed Dial actions are closed -->
+      <f7-icon f7="add"></f7-icon>
+      <!-- Second icon is visible when Speed Dial actions are opened -->
+      <f7-icon f7="close"></f7-icon>
+
+      <!-- Speed Dial Buttons -->
+      <f7-fab-buttons>
+        <f7-fab-button color="orange" @click="onButtonClick">A</f7-fab-button>
+        <f7-fab-button color="green" @click="onButtonClick">B</f7-fab-button>
+        <f7-fab-button color="blue" @click="onButtonClick">C</f7-fab-button>
+      </f7-fab-buttons>
+    </f7-fab>
+    ...
+  </f7-page>
+  Renders to:
+  ...
+  <div class="fab fab-right-bottom color-pink">
+    <a href="#">
+      <i class="icon f7-icons">add</i>
+      <i class="icon f7-icons">close</i>
+    </a>
+    <div class="fab-buttons fab-buttons-top">
+      <a href="#" class="color-orange">A</a>
+      <a href="#" class="color-green">B</a>
+      <a href="#" class="color-blue">C</a>
+    </div>
+  </div>
+  ...
 ```
 
 ## 19.0 Grid Vue Component
@@ -3193,3 +3196,6 @@ var myPlugin = {
 
 Framework7.use(myPlugin);
 ```
+
+## 59.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

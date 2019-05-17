@@ -1,3 +1,9 @@
+Vue-Infinite-Loading Study Guildline
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_4
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 Installation
 ```
 npm install vue-infinite-loading -S
@@ -186,7 +192,6 @@ export default {
     </infinite-loading>
   </el-table>
 </div>
-
 ```
 
 ## 9.0 Configure Load Messages
@@ -195,7 +200,7 @@ Via Component Prop
 Only the spinner slot can be configured via the prop, and the set value can only be the built-in spinner type:
 <infinite-loading spinner="spiral"></infinite-loading>
 You can preview all built-in spinner types on the right. Please use other ways if you want to create your own spinner.
-#
+
 Via slot Sepcial Attribute
 We can use the slot special attribute  to configure them:
 <infinite-loading>
@@ -209,7 +214,7 @@ Unlike other slots, the default value for the error slot will provide a retry bu
     Error message, click <a href="javascript:;" @click="trigger">here</a> to retry
   </div>
 </infinite-loading>
-#
+
 Via Plugin API
 In order to maintain consistent behavior for all load messages when we are building a large application, this plugin supports configuration on all slots using the plugin API. We just need to pass a string or Vue component to it, click here to read more about that.
 The error slot is still special in this way. Just as with the slot special attribute, if you want to implement a retry button for users in your own error component, you can use the vm.$attrs  property, like this:
@@ -228,7 +233,7 @@ export default {
   },
   /* ... */
 };
-#
+
 About Hide & Default Styles
 For easy use, this component provides some default styles (font-size, color and padding) for slot content. If you want to keep all default styles when you configure via the slot special attribute, you have to wrap the content with a template tag:
 <infinite-loading>
@@ -284,7 +289,7 @@ Vue.use(InfiniteLoading, {
     /* other settings need to configure */
   },
 });
-#
+
 Slots
 Unlike properties and settings, slot options can be either a string or a Vue Component:
 import Vue from 'vue';
@@ -298,3 +303,7 @@ Vue.use(InfiniteLoading, {
   },
 });
 ```
+
+## 11.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+
