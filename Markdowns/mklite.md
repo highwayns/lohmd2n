@@ -1,3 +1,9 @@
+ML Kit For Firebase
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_6
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 ML Kit For Firebaseとは
 ```
 ML Kitはモバイル端末上で機械学習を扱いやすくするためのパッケージです。
@@ -545,3 +551,6 @@ app/build.gradleに記載されているapplicationIdをAndroidパッケージ�
 
 ## 17.4 実際に動かしてみる
 * picturePath: https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2018/08/3b3ca3e306e7b59a3d9e05d93e60d84d-640x280.png
+
+## 18.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
