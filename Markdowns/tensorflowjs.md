@@ -8,6 +8,15 @@ ng new tensorflowApp
 ```
 cd tensorflowApp
 npm install @tensorflow/tfjs --save
+
+But instead of using a pre-install, I just hand edited
+`node_modules/@angular-devkit/build-angular/src/angular
+-cli-files/models/webpack-configs/browser.js' and 
+changed the lines in that regex:
+// old:
+node: false,
+// new:
+node: { crypto: true, stream: true },
 ```
 
 ## 3.0 Train a Basic TensorFlow.js Linear Model
