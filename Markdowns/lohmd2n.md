@@ -31,8 +31,10 @@ NOTE: 命令都是在终端里进行的。
 MD2HTML | gulp MD2HTML | 把 markdown 转换成 HTML 文件。
 MD2PDF | gulp MD2PDF | 把 markdown 转换成 PDF 文件。
 MD2JSON| gulp MD2JSON| 把 markdown 转换成 JSON 文件。
-watching | gulp watching| 监视 Markdowns 文件夹，一旦 markdown 文件被更改(新建、修改、删除)时自动进行转换。
-default | gulp 或者 gulp default | 一次批量把markdown 文件转换成相应的HTML/JSON/PDF文件。
+watching | gulp watching| 监视 Markdowns 文件夹，一旦 markdown 
+文件被更改(新建、修改、删除)时自动进行转换。
+default | gulp 或者 gulp default | 一次批量把markdown 文件转换成
+相应的HTML/JSON/PDF文件。
 ```
 
 ## 4.0 MD文件说明

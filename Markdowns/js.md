@@ -108,8 +108,11 @@ ToPrimitive([]) == 0
 ## 4.0 prototype
 ```
 每个函数都有 prototype 属性，除了 Function.prototype.bind()，该属性指向原型。
-每个对象都有 __proto__ 属性，指向了创建该对象的构造函数的原型。其实这个属性指向了 [[prototype]]，但是 [[prototype]] 是内部属性，我们并不能访问到，所以使用 _proto_ 来访问。
-对象可以通过 __proto__ 来寻找不属于该对象的属性，__proto__ 将对象连接起来组成了原型链。
+每个对象都有 __proto__ 属性，指向了创建该对象的构造函数的原型。其实这个属性指
+向了 [[prototype]]，但是 [[prototype]] 是内部属性，我们并不能访问到，所以使
+用 _proto_ 来访问。
+对象可以通过 __proto__ 来寻找不属于该对象的属性，__proto__ 将对象连接起来组成
+了原型链。
 new
 function create() {
     // 创建一个空的对象
@@ -169,7 +172,8 @@ var obj = {
 	foo: foo
 }
 obj.foo()
-// 以上两者情况 this 只依赖于调用函数前的对象，优先级是第二个情况大于第一个情况
+// 以上两者情况 this 只依赖于调用函数前的对象，优先级是第二个情况大于
+第一个情况
 ```
 
 ## 7.0 执行上下文
@@ -183,12 +187,15 @@ var foo = 1
     console.log(foo)
 }()) // -> ƒ foo() { foo = 10 ; console.log(foo) }
 
-var 会产生很多错误，所以在 ES6中引入了 let。let 不能在声明前使用，但是这并不是常说的 let 不会提升，let 提升了声明但没有赋值，因为临时死区导致了并不能在声明前使用。
+var 会产生很多错误，所以在 ES6中引入了 let。let 不能在声明前使用，但是
+这并不是常说的 let 不会提升，let 提升了声明但没有赋值，因为临时死区导致
+了并不能在声明前使用。
 ```
 
 ## 8.0 闭包:
 ```
-函数 A 返回了一个函数 B，并且函数 B 中使用了函数 A 的变量，函数 B 就被称为闭包。
+函数 A 返回了一个函数 B，并且函数 B 中使用了函数 A 的变量，函数 B 
+就被称为闭包。
 for ( var i=1; i<=5; i++) {
 	setTimeout( function timer() {
 		console.log( i );
@@ -261,7 +268,9 @@ let b = JSON.parse(JSON.stringify(a))
 a.jobs.first = 'native'
 console.log(b.jobs.first) // FE
 
-但是在通常情况下，复杂数据都是可以序列化的，所以这个函数可以解决大部分问题，并且该函数是内置函数中处理深拷贝性能最快的。当然如果你的数据中含有以上三种情况下，可以使用 lodash 的深拷贝函数。
+但是在通常情况下，复杂数据都是可以序列化的，所以这个函数可以解决大
+部分问题，并且该函数是内置函数中处理深拷贝性能最快的。当然如果你的
+数据中含有以上三种情况下，可以使用 lodash 的深拷贝函数。
 function structuralClone(obj) {
   return new Promise(resolve => {
     const {port1, port2} = new MessageChannel();
@@ -356,14 +365,16 @@ const debounce = (func, wait = 50) => {
     }, wait)
   }
 }
-// 不难看出如果用户调用该函数的间隔小于wait的情况下，上一次的时间还未到就被清除了，并不会执行函数
+// 不难看出如果用户调用该函数的间隔小于wait的情况下，上一次的时间还
+未到就被清除了，并不会执行函数
 
 // 这个是用来获取当前时间戳的
 function now() {
   return +new Date()
 }
 /**
- * 防抖函数，返回函数连续调用时，空闲时间必须大于或等于 wait，func 才会执行
+ * 防抖函数，返回函数连续调用时，空闲时间必须大于或等于 wait，
+ func 才会执行
  *
  * @param  {function} func        回调函数
  * @param  {number}   wait        表示时间窗口的间隔
@@ -519,7 +530,8 @@ getValue.call(a, 'yck', '24')
 getValue.apply(a, ['yck', '24'])
 
 call, apply, bind 区别
-all 和 apply 都是为了解决改变 this 的指向。作用都是相同的，只是传参的方式不同。
+all 和 apply 都是为了解决改变 this 的指向。作用都是相同的，只是传
+参的方式不同。
 let a = {
     value: 1
 }
