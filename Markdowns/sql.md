@@ -1,3 +1,9 @@
+SQL
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_3c
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 基础
 ```
 模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。
@@ -11,7 +17,7 @@ SQL 语句不区分大小写，但是数据库表名、列名和值是否区分�
 SQL 支持以下三种注释：
 
 sql
-# 注释
+注释
 SELECT *
 FROM mytable; -- 注释
 /* 注释1
@@ -724,3 +730,5 @@ REVOKE SELECT, INSERT ON mydatabase.* FROM myuser;
 sql
 SET PASSWROD FOR myuser = Password('new_password');
 ```
+## 28.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

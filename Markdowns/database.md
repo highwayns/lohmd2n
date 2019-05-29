@@ -1,3 +1,9 @@
+数据库原理
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_32
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 事务
 ```
 概念
@@ -512,3 +518,5 @@ Entity-Relationship，有三个组成部分：实体、属性、联系。
 
 <div align="center"> <img src="pics/14389ea4-8d96-4e96-9f76-564ca3324c1e.png" width="450px"/> </div><br>
 ```
+## 14.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

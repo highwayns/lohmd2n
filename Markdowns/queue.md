@@ -1,3 +1,9 @@
+队列
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_38
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 点对点
 ```
 消息生产者向消息队列中发送了一个消息之后，只能被一个消费者消费一次。
@@ -59,3 +65,5 @@
  保证接收端处理消息的业务逻辑具有幂等性：只要具有幂等性，那么消费多少次消息，最后处理的结果都是一样的。
  保证消息具有唯一编号，并使用一张日志表来记录已经消费的消息编号。
 ```
+## 5.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
