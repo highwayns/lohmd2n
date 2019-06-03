@@ -375,3 +375,36 @@ gulp.task('UploadData', function(){
 	  })
 	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
 })
+// include file system module
+var fs = require('fs'); 
+gulp.task('LoadData', function(){ 
+	// read file sample.json file
+	fs.readFile('JSONs\data.json', 
+		// callback function that is called when reading file is done
+		function(err, data) {  
+			// json data
+			var jsonData = data; 
+
+			// parse json
+			var jsonParsed = JSON.parse(jsonData); 
+
+			// access elements
+			// console.log(jsonParsed.persons[0].name + "'s office phone number is " + jsonParsed.persons[0].phone.office); 
+			// console.log(jsonParsed.persons[1].name + " is from " + jsonParsed.persons[0].city); 
+	})
+}) 
+
+gulp.task('saveData', function(){
+	// stringify JSON Object
+	var jsonContent = JSON.stringify(jsonObj); 
+	console.log(jsonContent); 
+ 
+	fs.writeFile("JSONs\data.json", jsonContent, 'utf8', function (err) { 
+			if (err) { 
+					console.log("An error occured while writing JSON Object to File."); 
+					return console.log(err); 
+			} 
+	
+			console.log("JSON file has been saved."); 
+	}) 
+})
