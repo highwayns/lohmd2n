@@ -346,222 +346,62 @@ gulp.task('DownloadData', function(){
 			chat.setUser(user.uid, snapshot.child('name').val(), function() {
 				chat.getKnowledgeList(function(knowledges) {
 					for (const knowledge in knowledges) {
-						let fileName = './Markdowns/' + knowledge.name + '.md'
-						fs.writeFile(fileName, knowledge.name, 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
-						fs.appendFile(fileName, '===', 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
-						fs.appendFile(fileName, '* knowledgeid: ' + knowledge.id, 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
-						fs.appendFile(fileName, '* author: ' + knowledge.nickname, 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
-						fs.appendFile(fileName, '* authorid: ' + knowledge.avatar, 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
-						fs.appendFile(fileName, '', 'utf8', function (err) { 
-							if (err) { 
-								console.log("An error occured while writing JSON Object to File."); 
-								return console.log(err); 
-							} 						
-						}) 
+						let fileName = './Markdowns/' + knowledges[knowledge].name + '.md'
+						fs.writeFileSync(fileName, knowledges[knowledge].name + '\r\n', 'utf8') 
+						fs.appendFileSync(fileName, '===' + '\r\n', 'utf8') 
+						fs.appendFileSync(fileName, '* knowledgeid: ' + knowledges[knowledge].id + '\r\n', 'utf8') 
+						fs.appendFileSync(fileName, '* author: ' + knowledges[knowledge].nickname + '\r\n', 'utf8') 
+						fs.appendFileSync(fileName, '* authorid: ' + knowledges[knowledge].avatar + '\r\n', 'utf8') 
+						fs.appendFileSync(fileName, '' + '\r\n', 'utf8') 
 											
 						chat.getKnowledgeContents(knowledge, function(knowledgecontents) {
 							for (const knowledgecontent in knowledgecontents) {
-								fs.appendFile(fileName, '## ' + knowledgecontent.title, 'utf8', function (err) { 
-									if (err) { 
-										console.log("An error occured while writing JSON Object to File."); 
-										return console.log(err); 
-									} 						
-								}) 
-								switch(knowledgecontent.contents.type) {
+								fs.appendFileSync(fileName, '## ' + knowledgecontents[knowledgecontent].title + '\r\n', 'utf8') 
+								switch(knowledgecontents[knowledgecontent].content.type) {
 									case 'Html':
-										fs.appendFile(fileName, '```', 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, knowledgecontent.contents.data.replace(/<pre><code>/g,'').replace(/<\/code><\/pre>/g,''), 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '```', 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
+										fs.appendFileSync(fileName, '```' + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, knowledgecontents[knowledgecontent].content.data.replace(/<pre><code>/g,'').replace(/<\/code><\/pre>/g,'') + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '```' + '\r\n', 'utf8') 
 										break;
 									case 'Select':
-										fs.appendFile(fileName, '* title: ' + knowledgecontent.contents.title, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* a: ' + knowledgecontent.contents.a, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* b: ' + knowledgecontent.contents.b, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* c: ' + knowledgecontent.contents.c, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* d: ' + knowledgecontent.contents.d, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* answer: ' + knowledgecontent.contents.answer, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
+										fs.appendFileSync(fileName, '* title: ' + knowledgecontents[knowledgecontent].content.title + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.a + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.b + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.c + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.d + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* answer: ' + knowledgecontents[knowledgecontent].content.answer + '\r\n', 'utf8') 
 										break;
 									case 'Input':
-										fs.appendFile(fileName, '* inputcontent: ' + knowledgecontent.contents.inputcontent, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* inputanswer: ' + knowledgecontent.contents.inputanswer, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* title: ' + knowledgecontent.contents.title, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* inputcontent: ' + knowledgecontents[knowledgecontent].content.inputcontent + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* inputanswer: ' + knowledgecontents[knowledgecontent].content.inputanswer + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* title: ' + knowledgecontents[knowledgecontent].content.title + '\r\n', 'utf8')
 										break; 
 									case 'Youtube':
-										fs.appendFile(fileName, '* youtubePath: ' + knowledgecontent.contents.youtubePath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* youtubePath: ' + knowledgecontents[knowledgecontent].content.youtubePath + '\r\n', 'utf8')
 										break;
 									case 'Picture':
-										fs.appendFile(fileName, '* picturePath: ' + knowledgecontent.contents.picturePath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* picturePath: ' + knowledgecontents[knowledgecontent].content.picturePath + '\r\n', 'utf8')
 										break;
 									case 'Audio':
-										fs.appendFile(fileName, '* audioPath: ' + knowledgecontent.contents.audioPath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* audioPath: ' + knowledgecontents[knowledgecontent].content.audioPath + '\r\n', 'utf8')
 										break;
 									case 'MultiSelect':
-										fs.appendFile(fileName, '* title: ' + knowledgecontent.contents.title, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* a: ' + knowledgecontent.contents.a, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* b: ' + knowledgecontent.contents.b, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* c: ' + knowledgecontent.contents.c, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* d: ' + knowledgecontent.contents.d, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
-										fs.appendFile(fileName, '* answer: ' + knowledgecontent.contents.answer, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										}) 
+										fs.appendFileSync(fileName, '* title: ' + knowledgecontents[knowledgecontent].content.title + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.a + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.b + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.c + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.d + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* answer: ' + knowledgecontents[knowledgecontent].content.answer + '\r\n', 'utf8') 
 										break;
 									case 'Advertisment':
-										fs.appendFile(fileName, '* advertismentPath: ' + knowledgecontent.contents.advertismentPath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
-										fs.appendFile(fileName, '* link: ' + knowledgecontent.contents.link, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* advertismentPath: ' + knowledgecontents[knowledgecontent].content.advertismentPath + '\r\n', 'utf8')
+										fs.appendFileSync(fileName, '* link: ' + knowledgecontents[knowledgecontent].content.link + '\r\n', 'utf8')
 										break;
 									case 'Flash':
-										fs.appendFile(fileName, '* flashPath: ' + knowledgecontent.contents.flashPath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* flashPath: ' + knowledgecontents[knowledgecontent].content.flashPath + '\r\n', 'utf8')
 										break;
 									case 'Certificate':
-										fs.appendFile(fileName, '* certificatePath: ' + knowledgecontent.contents.certificatePath, 'utf8', function (err) { 
-											if (err) { 
-												console.log("An error occured while writing JSON Object to File."); 
-												return console.log(err); 
-											} 						
-										})
+										fs.appendFileSync(fileName, '* certificatePath: ' + knowledgecontents[knowledgecontent].content.certificatePath + '\r\n', 'utf8')
 										break;
 									}
 								}
@@ -592,12 +432,12 @@ gulp.task('UploadData', function(){
 						// parse json
 						var knowledgecontents = JSON.parse(jsonData); 
 						var contentCount = 0;
-						for (const knowledgecontent in knowledgecontents) {
+						for (const knowledgecontent in knowledgecontents.data.value.contents) {
 							contentCount++;
 						}
 						knowledges[knowledge].content_count = contentCount;
 						chat.updateKnowledge(knowledge, knowledges[knowledge]);
-						chat.updateKnowledgeContent(knowledge, knowledgecontent);
+						chat.updateKnowledgeContents(knowledge, knowledgecontents.data.value);
 					})
 				}
 			  })
@@ -606,4 +446,25 @@ gulp.task('UploadData', function(){
 		}
 	  })
 	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
+})
+
+const pdf2png = require("pdf2png-mp2/lib/pdf2png.js");
+gulp.task('PDF2Png', function(){
+	// Most simple example
+	pdf2png.convert("./PDFs/angular.pdf", function(resp){
+		if(!resp.success)
+		{
+			console.log("Something went wrong: " + resp.error);
+			return;
+		}
+		console.log("Yayy the pdf got converted, now I'm gonna save it!");
+		fs.writeFile("./PNGs/example_simple.png", resp.data, function(err) {
+			if(err) {
+				console.log(err);
+			}
+			else {
+				console.log("The file was saved!");
+			}
+		});
+	});	
 })

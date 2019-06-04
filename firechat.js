@@ -3109,6 +3109,15 @@ Firechat.prototype.removeKnowledgeContent = function(knowledgeKey, contentKey, c
   })
 }
 
+Firechat.prototype.updateKnowledgeContents = function(knowledgeKey, contents, callback) {
+  const self = this
+  self._knowledgecontentsRef.child('data').child(knowledgeKey).set(contents, function(error) {
+    if (!error && callback) {
+      callback()
+    }
+  })
+}
+
 Firechat.prototype.getKnowledgeLikes = function(knowledgekey, cb) {
   const self = this
 

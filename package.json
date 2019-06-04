@@ -22,6 +22,7 @@
     "markdown-it": "^8.4.2",
     "markdown-js": "0.0.4",
     "node-jq": "^1.8.1",
+    "pdf2png-mp2": "^1.0.3",
     "pureimage": "^0.1.6",
     "remark": "^10.0.1"
   }
