@@ -6,6 +6,7 @@ var merge = require('gulp-merge-json');
 const auth = require('./firebaseConfig').auth
 const database = require('./firebaseConfig').database
 const chat = require('./firebaseConfig').chat
+var exit = require('gulp-exit');
 
 // Markdown to HTML
 var nMarked = require('marked');
@@ -413,7 +414,7 @@ gulp.task('DownloadData', function(){
 		}
 	})
 	auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
-})
+}).pipe(exit());
 // Upload to firebase
 gulp.task('UploadData', function(){
 	auth.onAuthStateChanged(function(user) {
@@ -446,7 +447,7 @@ gulp.task('UploadData', function(){
 		}
 	  })
 	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
-})
+}).pipe(exit());
 
 const pdf2png = require("pdf2png-mp2/lib/pdf2png.js");
 gulp.task('PDF2Png', function(){
@@ -467,4 +468,15 @@ gulp.task('PDF2Png', function(){
 			}
 		});
 	});	
-})
+}).pipe(exit());
+
+const ppt2png = require('ppt2png');
+gulp.task('PPT2Png', function(){
+	ppt2png('./PPTs/foo.ppt', './PNGs', function( err ){
+		if(err) {
+			console.log(err);
+		} else {
+			console.log('convert successful.');
+		}
+	});
+}).pipe(exit());
