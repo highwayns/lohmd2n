@@ -33,23 +33,21 @@ Write-Host "$result Celsius"
   Go to your command-line PowerShell
   Clear existing breakpoints if any
 
-```powershell
+powershell
  PS /home/jen/debug>Get-PSBreakpoint | Remove-PSBreakpoint
-```
 
   Use **Set-PSBreakpoint** cmdlet to set a debug breakpoint. In this case, we will set it to line 5
 
-```powershell
+powershell
 PS /home/jen/debug>Set-PSBreakpoint -Line 5 -Script ./test.ps1
 
 ID Script             Line       Command          Variable          Action
 -  ------             ----       -------          --------          ------
  0 test.ps1              5
-```
 
-- Run the script "test.ps1". As we have set a breakpoint, it is expected the program will break into the debugger at the line 5.
+ Run the script "test.ps1". As we have set a breakpoint, it is expected the program will break into the debugger at the line 5.
 
-```powershell
+powershell
 
 PS /home/jen/debug> ./test.ps1
 Input a temperature in Fahrenheit: 80
@@ -59,14 +57,13 @@ At /home/jen/debug/test.ps1:5 char:1
 + $celsius = $celsius / 1.8
 + ~~~~~~~~~~~~~~~~~~~~~~~~~
 [DBG]: PS /home/jen/debug>>
-```
 
-- The PowerShell prompt now has the prefix **[DBG]:** as you may have noticed. This means
+ The PowerShell prompt now has the prefix **[DBG]:** as you may have noticed. This means
  we have entered into the debug mode. To watch the variables like $celsius, simply type **$celsius** as below.
-- To exit from the debugging, type **q**
-- To get help for the debugging commands, simply type **?**. The following is an example of debugging output.
+ To exit from the debugging, type **q**
+ To get help for the debugging commands, simply type **?**. The following is an example of debugging output.
 
-```PowerShell
+PowerShell
 [DBG]: PS /home/jen/debug>> $celsius
 48
 [DBG]: PS /home/jen/debug>> $fahrenheit
@@ -109,27 +106,26 @@ PS /home/jen/debug>
 
 ```
 
-1. **Setting a Breakpoint on a Variable**
-- Clear existing breakpoints if there are any
+## 3.0 Setting a Breakpoint on a Variable**
+```
+Clear existing breakpoints if there are any
 
-```powershell
+powershell
  PS /home/jen/debug>Get-PSBreakpoint | Remove-PSBreakpoint
- ```
 
-- Use **Set-PSBreakpoint** cmdlet to set a debug breakpoint. In this case, we set it to line 5
+ Use **Set-PSBreakpoint** cmdlet to set a debug breakpoint. In this case, we set it to line 5
 
-```powershell
+powershell
 
  PS /home/jen/debug>Set-PSBreakpoint -Variable "celsius" -Mode write -Script ./test.ps1
 
-```
 
-- Run the script "test.ps1"
+ Run the script "test.ps1"
 
   Once hit the debug breakpoint, we can type **l** to list the source code that debugger is currently executing. As we can see line 3 has an asterisk at the front, meaning that's the line the program is currently executing and broke into the debugger as illustrated below.
-- Type **q** to exit from the debugging mode. The following is an example of debugging output.
+  Type **q** to exit from the debugging mode. The following is an example of debugging output.
 
-```powershell
+powershell
 ./test.ps1
 Input a temperature in Fahrenheit: 80
 Hit Variable breakpoint on '/home/jen/debug/test.ps1:$celsius' (Write access)
@@ -169,11 +165,13 @@ At /home/jen/debug/test.ps1:4 char:1
 [DBG]: PS /home/jen/debug>> q
 PS /home/jen/debug>
 
-```
 
 Now you know the basics of the PowerShell debugging from PowerShell command-line. For further learning, read the following articles.
-
-## More Reading
-
-- [about_Debuggers](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_debuggers?view=powershell-6)
-- [PowerShell Debugging](https://blogs.technet.microsoft.com/heyscriptingguy/tag/debugging/)
+```
+## 4.0 More Reading
+```
+  [about_Debuggers](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_debuggers?view=powershell-6)
+  [PowerShell Debugging](https://blogs.technet.microsoft.com/heyscriptingguy/tag/debugging/)
+```
+## 5.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
