@@ -1,5 +1,8 @@
 Firebase study Guildline
 ====
+* knowledgeid: -LdLtaiBADqiIat-6k_45
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
 ## 1.0 index
 ```
@@ -1166,3 +1169,6 @@ Type aliases
  TaskEvent
  TaskState
 ```
+## 39.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+

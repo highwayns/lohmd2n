@@ -1,111 +1,106 @@
-# Docker Overview
+Docker Overview
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_44
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
-## こんな人に有効
-
-- Linux 使ってるけど vagrant とか Virtual Box とか時間かかってめんどい
-- VM 作りまくって何が何だかわからなくなった
-- Warden が動かない, Buildpack なにそれおいしいの?
-- Go!
+## 1.0 こんな人に有効
+```
+  Linux 使ってるけど vagrant とか Virtual Box とか時間かかってめんどい
+  VM 作りまくって何が何だかわからなくなった
+  Warden が動かない, Buildpack なにそれおいしいの?
+  Go!
 
 note: Ubuntu 12.04 (linux-image-3.8.0-23-generic) 使ってます。 Kernel 3.5 以前では安定しない模様。
-
-## インストール
-
-````
+```
+## 2.0 インストール
+```
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -q -y curl
 
 $ sudo -s
-# export http_proxy=xxxxx
-# export https_proxy=xxxxx
-# curl get.docker.io | sh -x
-````
+ export http_proxy=xxxxx
+ export https_proxy=xxxxx
+ curl get.docker.io | sh -x
 
-note: この手順だとサービスの自動起動を登録しないので、リブートしたときは `start dockerd` で起動させる
+note: この手順だとサービスの自動起動を登録しないので、リブートしたときは 'start dockerd' で起動させる
+```
 
-## いろいろ試す
-
-### 最初のコマンド
+## 3.0 いろいろ試す
+```
+最初のコマンド
 
 Docker で /bin/echo をコンテナで起動する
 
-````
-# docker pull base
-# docker run base /bin/echo Hello World
+ docker pull base
+ docker run base /bin/echo Hello World
 Hellow World
-````
 
-### コンテナのホスト名を確認
+コンテナのホスト名を確認
 
-````
-# docker run base /bin/hostname
+ docker run base /bin/hostname
 550cf7ca6e98
-# docker run base /bin/hostname
+ docker run base /bin/hostname
 f2aa47f6ea1c
-````
+```
 
-### IPアドレスは....?
-
-````
-# docker run base /sbin/ip addr | grep eth0
+## 4.0 IPアドレスは....?
+```
+ docker run base /sbin/ip addr | grep eth0
 21: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
     inet 172.16.42.7/24 brd 172.16.42.255 scope global eth0
-# docker run base /sbin/ip addr | grep eth0
+ docker run base /sbin/ip addr | grep eth0
 24: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
     inet 172.16.42.8/24 brd 172.16.42.255 scope global eth0
-# docker run base /sbin/ip addr | grep eth0
+ docker run base /sbin/ip addr | grep eth0
 27: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 1000
     inet 172.16.42.9/24 brd 172.16.42.255 scope global eth0
-````
+```
 
-## もうちょっと試す
+## 5.0 もうちょっと試す
+```
 
-### /bin/bash を実行する
+/bin/bash を実行する
 
-````
-# docker run -i -t base /bin/bash
+ docker run -i -t base /bin/bash
 root@b51e604d11b6:/# ps aux
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.1  0.0  18056  1940 ?        S    04:23   0:00 /bin/bash
 root        17  0.0  0.0  15528  1124 ?        R+   04:23   0:00 ps aux
-````
 
 コンテナ内のプロセスしか見えない
+```
 
-### コンテナをバックグラウンドで動かす
-
-````
-# docker run -i -t -d base /bin/bash
+## 6.0 コンテナをバックグラウンドで動かす
+```
+ docker run -i -t -d base /bin/bash
 4774e1bbbd18
-# docker ps
+ docker ps
 ID                  IMAGE               COMMAND             CREATED              STATUS              PORTS
 4774e1bbbd18        base:latest         /bin/bash           About a minute ago   Up About a minute
-````
 
-### コンテナにアタッチする
+ コンテナにアタッチする
 
-````
-# docker attach 4774e1bbbd18
+ docker attach 4774e1bbbd18
 
 root@4774e1bbbd18:/#
-````
+```
+## 7.0 Node.js サーバーを試す
+```
+まずはアプリとDockerfileを作る
 
-### Node.js サーバーを試す
-
-#### まずはアプリとDockerfileを作る
-
-````
-# mkdir nodeapp
-# cd nodeapp
-# mkdir src
-# vi app.js
+ mkdir nodeapp
+ cd nodeapp
+ mkdir src
+ vi app.js
 var PORT = 8080;
 var server = require('http').createServer(function(req, res){
   res.send('Hello World\n');
 });
 server.listen(PORT)
 console.log('Running on http://localhost:' + PORT);
-
-# vi Dockerfile
+```
+## 8.0 vi Dockerfile
+```
 FROM    base
 RUN     apt-get update -o "Acquire::http::proxy=xxxxx"
 RUN     apt-get install -q -y -o "Acquire::http::proxy=xxxxx" nodejs
@@ -113,12 +108,10 @@ RUN     apt-get install -q -y -o "Acquire::http::proxy=xxxxx" nodejs
 ADD     . ./src
 EXPOSE  8080
 CMD     ["node", "/src/app.js"]
-````
 
-#### Docker のイメージとしてビルドする
+Docker のイメージとしてビルドする
 
-````
-# docker build -t yssk22/node-hello .
+ docker build -t yssk22/node-hello .
 Uploading context 10240 bytes
 Step 1 : FROM base
  ---> b750fe79269d
@@ -137,75 +130,70 @@ Step 6 : CMD ["node", "/src/app.js"]
  ---> Running in fcfdd87a6b97
  ---> c01203ff6be0
 Successfully built c01203ff6be0
-
-# docker images
+```
+## 9.0 docker images
+```
 REPOSITORY          TAG                 ID                  CREATED              SIZE
 base                latest              b750fe79269d        3 months ago         24.65 kB (virtual 180.1 MB)
 base                ubuntu-12.10        b750fe79269d        3 months ago         24.65 kB (virtual 180.1 MB)
 base                ubuntu-quantal      b750fe79269d        3 months ago         24.65 kB (virtual 180.1 MB)
 base                ubuntu-quantl       b750fe79269d        3 months ago         24.65 kB (virtual 180.1 MB)
 yssk22/node-hello   latest              c01203ff6be0        About a minute ago   12.29 kB (virtual 309.8 MB)
-````
 
-#### 起動する
+起動する
 
-````
-# docker run -d yssk22/node-hello
+ docker run -d yssk22/node-hello
 923c56817dac
-# docker ps
+ docker ps
 ID                  IMAGE                      COMMAND                CREATED             STATUS              PORTS
 344d6d56fb46        yssk22/node-hello:latest   /usr/bin/nodejs /src   2 seconds ago       Up 1 seconds        49167->8080
-````
 
 note: docker ps で表示されない場合は -d を削除して interactive で起動してみるとよい
 
 ホストのランダムポートからEXPOSEで指定したポートへのマッピング済みなのでホストから確認できる
 
-````
-# curl http://localhost:49167/
+ curl http://localhost:49167/
 Hello World
-````
+```
 
-## 気になるところを試す
-
-### ネットワーク
+## 10.0 気になるところを試す
+```
+ネットワーク
 
 ポートマッピング誰がしてる?
 
-````
-# netstat -an | grep 49167
+ netstat -an | grep 49167
 tcp        0      0 127.0.0.1:49167         0.0.0.0:*               LISTEN
-# lsof | grep 49167
+ lsof | grep 49167
 docker    1362        root   16u     IPv4              18332      0t0        TCP localhost:49167 (LISTEN)
-# ps aux | grep docker
+ ps aux | grep docker
 root      1362  0.9  0.4 276900  9528 pts/2    Ssl+ 04:47   0:20 /usr/local/bin/docker -d
-# iptables -t nat -L
+ iptables -t nat -L
 Chain PREROUTING (policy ACCEPT)
 target     prot opt source               destination
-DOCKER     all  --  anywhere             anywhere             ADDRTYPE match dst-type LOCAL
+DOCKER     all  -   anywhere             anywhere             ADDRTYPE match dst-type LOCAL
 
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
 
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination
-DOCKER     all  --  anywhere            !127.0.0.0/8          ADDRTYPE match dst-type LOCAL
+DOCKER     all  -   anywhere            !127.0.0.0/8          ADDRTYPE match dst-type LOCAL
 
 Chain POSTROUTING (policy ACCEPT)
 target     prot opt source               destination
-MASQUERADE  all  --  10.0.3.0/24         !10.0.3.0/24
-MASQUERADE  all  --  172.16.42.0/24      !172.16.42.0/24
+MASQUERADE  all  -   10.0.3.0/24         !10.0.3.0/24
+MASQUERADE  all  -   172.16.42.0/24      !172.16.42.0/24
 
 Chain DOCKER (2 references)
 target     prot opt source               destination
-DNAT       tcp  --  anywhere             anywhere             tcp dpt:49153 to:172.16.42.6:8080
+DNAT       tcp  -   anywhere             anywhere             tcp dpt:49153 to:172.16.42.6:8080
 
-````
+```
 
-IPアドレスをどう管理している?
-
-````
-# docker inspect 344d6d56fb46
+## 11.0 IPアドレスをどう管理している?
+```
+ docker inspect 344d6d56fb46
 ....
     "NetworkSettings": {
         "IPAddress": "172.16.42.21",
@@ -217,71 +205,65 @@ IPアドレスをどう管理している?
         }
     },
 ....
-````
+```
 
-## Docker を支える技術
+## 12.0 Docker を支える技術
+```
+cgroup / namespacing
 
-### cgroup / namespacing
-
-#### cgroup
+cgroup
 
 ユーザー定義のプロセスグループにリソース(CPU時間, メモリ, IO, ...etc)を割り当てる仕組み
 
-#### namespacing
+namespacing
 
 プロセスグループを隔離する仕組み
 
-- 他のプロセスグループとPID空間を分離する
-- 他のプロセスグループとネットワーク空間を分離する
-- 他のプロセスグループとファイルシステム空間を分離する
-- ...etc
+  他のプロセスグループとPID空間を分離する
+  他のプロセスグループとネットワーク空間を分離する
+  他のプロセスグループとファイルシステム空間を分離する
+  ...etc
 
 これにより、コンテナ毎に"同じポートやファイルシステムツリーで"サーバーを立てることが可能。
 
-### AUFS
+AUFS
 
 Another Union File System. Linux で Union Mount を可能にするファイルシステム。
 
-### Union Mount
+Union Mount
 
 1つのマウントポイントで複数のディスクデバイスを扱えるようにする。
 
-````
 /mnt/disk
   + /dev/sda1
   + /dev/sdb1
-````
 
 複数のデバイスは階層化させることができるので、
 
-````
 /mnt/disk
   /dev/sda1 このディスクにベースのイメージを保存する
   /dev/sdb1 このディスクに起動後に更新のあったファイルを書き込む
-````
 
 といった感じで使うことができる(Dockerの実装は未確認)
 
-- Docker ではこれを利用してコンテナイメージファイルの履歴管理をする
-  - `docker commit`: 更新をコミットして元のイメージを更新することも出来る
-  - `docker diff`: コンテナとイメージのdiffを取得できる
-  - `docker history`: イメージの更新履歴を取得できる
+  Docker ではこれを利用してコンテナイメージファイルの履歴管理をする
+    'docker commit': 更新をコミットして元のイメージを更新することも出来る
+    'docker diff': コンテナとイメージのdiffを取得できる
+    'docker history': イメージの更新履歴を取得できる
+```
 
-
-## 四の五のいわずにとりあえずソース読もう
-
-- GIT_REPO_ROOT/ が docker パッケージ
-- GIT_REPO_ROOT/docker/ が main パッケージの構成
+## 13.0 四の五のいわずにとりあえずソース読もう
+```
+  GIT_REPO_ROOT/ が docker パッケージ
+  GIT_REPO_ROOT/docker/ が main パッケージの構成
   main 内で
 
-  ````
   import (
 
         "github.com/dotcloud/docker"
         "github.com/dotcloud/docker/utils"
 
   )
-  ````
 
   のようなことをしている
 
@@ -289,7 +271,6 @@ Another Union File System. Linux で Union Mount を可能にするファイル�
 ./docker/docker.go: main()関数。
 各種引数でオプションを処理。Dockerそのものに設定ファイルのようなものは存在しない。必要に応じてdockerパッケージのパッケージ変数を設定していく。
 
-````
 31         bridgeName := flag.String("b", "", "Attach containers to a pre-existing network bridge")
 ...
 46         if *bridgeName != "" {
@@ -297,13 +278,11 @@ Another Union File System. Linux で Union Mount を可能にするファイル�
 48         } else {
 49                 docker.NetworkBridgeIface = docker.DefaultNetworkBridge
 50         }
-````
 
 -b オプションで利用するブリッジを設定可能、デフォルトでは docker0 が使われる。
 
 ./runtime.go: Docker 環境を管理するコード。Runtime 構造体およびその関数。
 
-````
  22 type Runtime struct {
  23         root           string
  24         repository     string
@@ -319,11 +298,9 @@ Another Union File System. Linux で Union Mount を可能にするファイル�
  34         srv            *Server
  35         Dns            []string
  36 }
-````
 
 ./network.go ネットワーク管理。NetworkManager 構造体およびその関数。
 
-````
 539 // Network Manager manages a set of network interfaces
 540 // Only *one* manager per host machine should be used
 541 type NetworkManager struct {
@@ -334,11 +311,9 @@ Another Union File System. Linux で Union Mount を可能にするファイル�
 546         portAllocator *PortAllocator
 547         portMapper    *PortMapper
 548 }
-````
 
 NetworkManager は専用にBridgeを利用する(渡された名前のものがなければ作る)
 
-````
 564 func newNetworkManager(bridgeIface string) (*NetworkManager, error) {
 565         addr, err := getIfaceAddr(bridgeIface)
 566         if err != nil {
@@ -351,11 +326,9 @@ NetworkManager は専用にBridgeを利用する(渡された名前のものが�
 573                         return nil, err
 574                 }
 575         }
-````
 
 決め打ちで "172.16.42.1/24", "10.0.42.1/24", "192.168.42.1/24" が順に使われる模様。routing情報が設定されていなければ勝手に使ってしまうので、注意。
 
-````
 115 func CreateBridgeIface(ifaceName string) error {
 116         // FIXME: try more IP ranges
 117         // FIXME: try bigger ranges! /24 is too small.
@@ -378,11 +351,9 @@ NetworkManager は専用にBridgeを利用する(渡された名前のものが�
 134                 return fmt.Errorf("Could not find a free IP address range for interface '%s'. Please configure its address     manually and run 'docker -b %s'", ifaceName, ifaceName)
 135         }
 136         utils.Debugf("Creating bridge %s with network %s", ifaceName, ifaceAddr)
-````
 
 ifaceName と ifaceAddr が決まったら ip コマンドでブリッジを作ってNATする。
 
-````
 137
 138         if output, err := ip("link", "add", ifaceName, "type", "bridge"); err != nil {
 139                 return fmt.Errorf("Error creating bridge: %s (output: %s)", err, output)
@@ -400,11 +371,9 @@ ifaceName と ifaceAddr が決まったら ip コマンドでブリッジを作�
 151         }
 152         return nil
 153 }
-````
-
-(参考): ルーティングの確認
-
-````
+```
+## 14.0 (参考): ルーティングの確認
+```
  96 func checkRouteOverlaps(dockerNetwork *net.IPNet) error {
  97         output, err := ip("route")
  98         if err != nil {
@@ -423,4 +392,7 @@ ifaceName と ifaceAddr が決まったら ip コマンドでブリッジを作�
 111         }
 112         return nil
 113 }
-````
+```
+## 15.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+
