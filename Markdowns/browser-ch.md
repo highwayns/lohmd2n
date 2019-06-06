@@ -409,7 +409,7 @@ cookie，localStorage，sessionStorage，indexDB
 
 ## 14.0 Service Worker
 ```
-  > Service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也
+Service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也
   可以在网络可用时作为浏览器和网络间的代理。它们旨在（除其他之外）使得能
   够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否
   驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API。
@@ -600,4 +600,4 @@ js
   ![](https://user-gold-cdn.xitu.io/2018/3/29/1626fb6f33a6f9d7?w=1588&h=768&f=png&s=263260)
 ```
 ## 20.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_dx20?alt=media&token=70c2e29c-49c1-45dd-a341-4cc012ca23a9

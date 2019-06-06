@@ -1,13 +1,19 @@
-# Debugging in PowerShell Command-line
+Debugging in PowerShell
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_43
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
+## 1.0 Debugging in PowerShell Command-line
+```
 As we know, we can debug PowerShell code via GUI tools like [Visual Studio Code](https://docs.microsoft.com/en-us/powershell/scripting/components/vscode/using-vscode?view=powershell-6#debugging-with-visual-studio-code). In addition, we can
 directly perform debugging within the PowerShell command-line session by using the PowerShell debugger cmdlets. This document demonstrates how to use the cmdlets for the PowerShell command-line debugging. We will cover the following topics:
 setting a debug breakpoint on a line of code and on a variable.
 
 Let's use the following code snippet as our sample script.
 
-```powershell
-# Convert Fahrenheit to Celsius
+powershell
+ Convert Fahrenheit to Celsius
 function ConvertFahrenheitToCelsius([double] $fahrenheit)
 {
 $celsius = $fahrenheit - 32
@@ -20,24 +26,24 @@ $result =[int](ConvertFahrenheitToCelsius($fahrenheit))
 Write-Host "$result Celsius"
 ```
 
- 1. **Setting a Breakpoint on a Line**
-
-- Open a [PowerShell editor](README.md#powershell-editor)
-- Save the above code snippet to a file. For example, "test.ps1"
-- Go to your command-line PowerShell
-- Clear existing breakpoints if any
+ ## 2.0 Setting a Breakpoint on a Line
+```
+  Open a [PowerShell editor](README.md#powershell-editor)
+  Save the above code snippet to a file. For example, "test.ps1"
+  Go to your command-line PowerShell
+  Clear existing breakpoints if any
 
 ```powershell
  PS /home/jen/debug>Get-PSBreakpoint | Remove-PSBreakpoint
 ```
 
-- Use **Set-PSBreakpoint** cmdlet to set a debug breakpoint. In this case, we will set it to line 5
+  Use **Set-PSBreakpoint** cmdlet to set a debug breakpoint. In this case, we will set it to line 5
 
 ```powershell
 PS /home/jen/debug>Set-PSBreakpoint -Line 5 -Script ./test.ps1
 
 ID Script             Line       Command          Variable          Action
--- ------             ----       -------          --------          ------
+-  ------             ----       -------          --------          ------
  0 test.ps1              5
 ```
 

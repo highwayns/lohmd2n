@@ -1,3 +1,9 @@
+cordova
+===
+* knowledgeid: -LdLtaiBADqiIat-6k_41
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 Android プラットフォーム ガイド
 ```
 このガイドは、Android デバイスのための Cordova アプリを展開する SDK 環境を設定する方法と必要に応じて開発ワークフローでアンドロイドを中心のコマンド ライン ツールを使用する方法を示します。 開発のためこれらのプラットフォームを中心としたシェル ツールまたはクロス プラットフォーム コルドバ CLI を使用するかどうかに関係なく Android SDK をインストールする必要があります。 2 つの開発パスの比較の概要を参照してください。 CLI の詳細は、コマンド ライン インターフェイスを参照してください。
@@ -350,3 +356,5 @@ Visual Studio のメイン メニューの下にあるコントロールでは�
 デスクトップの展開とは異なり、このオプションでは、タブレットの向き、場所をシミュレートし、そのネットワーク設定を変更することができます。
 注: あなたのワークフローでコルドバのコマンド ライン ツールまたは SDK を使用する方法についてのアドバイスの概要を参照してください。 コルドバの CLI は、日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK を使用して、プロジェクトを変更する場合は、CLI の代わりに低レベルのシェル ・ ツールを使用します。
 ```
+## 32.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

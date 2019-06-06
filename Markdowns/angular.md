@@ -134,7 +134,7 @@ app.component.ts (class title property)
     title = 'Tour of Heroes';
     }
 app.component.html (template)      
-    <h1>{{title}}</h1>
+    <h 1>{{title}}</h1>
 src/styles.css
 /* Application-wide Styles */
 h1 {
@@ -192,7 +192,7 @@ heroes.component.html
 ## 12.0 HeroesComponent ビューを表示する
 ```
 src/app/app.component.html   
-    <h1>{{title}}</h1>
+    <h 1>{{title}}</h1>
     <app-heroes></app-heroes>
 ```
 
@@ -229,14 +229,14 @@ src/app/heroes/heroes.component.ts
 ## 14.0 ヒーローオブジェクトを表示する
 ```
 heroes.component.html (HeroesComponent のテンプレート)
-    <h2>{{hero.name}} Details</h2>
+    <h 2>{{hero.name}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div><span>name: </span>{{hero.name}}</div>
 ```
 
 ## 15.0 UppercasePipe で書式設定する
 ```
-<h2>{{hero.name | uppercase}} Details</h2>
+{{hero.name | uppercase}} Details
 ```
 
 ## 16.0 ヒーローを編集する
@@ -316,7 +316,7 @@ src/app/heroes/heroes.component.ts (import HEROES)
     }
 
 heroes.component.html (heroes template)
-    <h2>My Heroes</h2>
+    <h 2>My Heroes</h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
@@ -329,7 +329,7 @@ heroes.component.html (heroes template)
 src/app/heroes/heroes.component.html (*ngIf)
     <div *ngIf="selectedHero">
 
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <h 2>{{selectedHero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{selectedHero.id}}</div>
     <div>
         <label>name:
@@ -347,7 +347,7 @@ ng generate component hero-detail
 src/app/hero-detail/hero-detail.component.html
     <div *ngIf="hero">
 
-    <h2>{{hero.name | uppercase}} Details</h2>
+    <h 2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
         <label>name:
@@ -369,7 +369,7 @@ src/app/hero-detail/hero.component.ts
     import { Component, OnInit, Input } from '@angular/core';
     @Input() hero: Hero;
 heroes.component.html
-    <h2>My Heroes</h2>
+    <h 2>My Heroes</h2>
 
     <ul class="heroes">
     <li *ngFor="let hero of heroes"
@@ -429,7 +429,7 @@ src/app/heroes/heroes.component.ts (import HeroService)
 ng generate component messages
 
 /src/app/app.component.html
-    <h1>{{title}}</h1>
+    <h 1>{{title}}</h1>
     <app-heroes></app-heroes>
     <app-messages></app-messages>
 /src/app/message.service.ts
@@ -471,7 +471,7 @@ ng generate component messages
 src/app/messages/messages.component.html
     <div *ngIf="messageService.messages.length">
 
-    <h2>Messages</h2>
+    <h 2>Messages</h2>
     <button class="clear"
             (click)="messageService.clear()">clear</button>
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
@@ -517,7 +517,7 @@ src/app/app-routing.module.ts (v1)
     { path: 'heroes', component: HeroesComponent }
     ];
 src/app/app.component.html (router-outlet)
-    <h1>{{title}}</h1>
+    <h 1>{{title}}</h1>
     <nav>
     <a routerLink="/heroes">Heroes</a>
     </nav>
@@ -570,7 +570,7 @@ src/app/app-routing.module.ts (import DashboardComponent)
     import { DashboardComponent }   from './dashboard/dashboard.component';
     { path: 'dashboard', component: DashboardComponent },
 src/app/app.component.html
-    <h1>{{title}}</h1>
+    <h 1>{{title}}</h1>
     <nav>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/heroes">Heroes</a>
@@ -674,10 +674,10 @@ src/app/hero.service.ts (RxJSの'of()'を使ったgetHeroes)
 src/app/hero.service.ts
     /** IDによりヒーローを取得する。見つからなかった場合は404を返却する。 */
     getHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
+    const url = '${this.heroesUrl}/${id}';
     return this.http.get<Hero>(url).pipe(
-        tap(_ => this.log(`fetched hero id=${id}`)),
-        catchError(this.handleError<Hero>(`getHero id=${id}`))
+        tap(_ => this.log('fetched hero id=${id}')),
+        catchError(this.handleError<Hero>('getHero id=${id}'))
     );
     }
 ```
@@ -948,7 +948,7 @@ this.http.request(request).subscribe(event => {
     if (event.type === HttpEventType.UploadProgress) {
         // 進捗状況の出力
         const percentDone = Math.round(100 * event.loaded / event.total);
-        console.log(`File is ${percentDone}% uploaded.`);
+        console.log('File is ${percentDone}% uploaded.');
     } else if (event instanceof HttpResponse) {
         // HttpResponseを取得した場合は処理完了
         console.log('File is completely uploaded!');
@@ -1308,7 +1308,7 @@ promise から observable を作成する
     const secondsCounter = interval(1000);
     // Subscribe to begin publishing values
     secondsCounter.subscribe(n =>
-    console.log(`It's been ${n} seconds since subscribing!`));
+    console.log('It's been ${n} seconds since subscribing!'));
 イベントから observable を作成する
     import { fromEvent } from 'rxjs';
     
@@ -1320,7 +1320,7 @@ promise から observable を作成する
     // Subscribe to start listening for mouse-move events
     const subscription = mouseMoves.subscribe((evt: MouseEvent) => {
     // Log coords of mouse movements
-    console.log(`Coords: ${evt.clientX} X ${evt.clientY}`);
+    console.log('Coords: ${evt.clientX} X ${evt.clientY}');
     
     // When the mouse is over the upper-left of the screen,
     // unsubscribe to stop listening for mouse movements
@@ -1463,13 +1463,13 @@ Router と Form モジュールは、ユーザー入力イベントを待ち受�
 ```
 @Component({
   selector: 'zippy',
-  template: `
+  template: '
   <div class="zippy">
     <div (click)="toggle()">Toggle</div>
     <div [hidden]="!visible">
       <ng-content></ng-content>
     </div>
-  </div>`})
+  </div>'})
  
 export class ZippyComponent {
   visible = true;
@@ -1504,8 +1504,8 @@ HTTP リクエストは unsubscribe() メソッドで取り消すことができ
 ```
 @Component({
   selector: 'async-observable-pipe',
-  template: `<div><code>observable|async</code>:
-       Time: {{ time | async }}</div>`
+  template: '<div><code>observable|async</code>:
+       Time: {{ time | async }}</div>'
 })
 export class AsyncObservablePipeComponent {
   time = new Observable(observer =>
@@ -1631,4 +1631,4 @@ function handleData(data) {
 }
 ```
 ## 82.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHFx80?alt=media&token=3a021dd2-2a44-4b4c-a3da-342fd9cda144

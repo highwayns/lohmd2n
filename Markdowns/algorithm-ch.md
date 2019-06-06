@@ -1,6 +1,6 @@
 算法
 ===
-* knowledgeid: -LdLtaiBADqiIat-6k_3
+* knowledgeid: -LdLtaiBADqiIat-6k_40
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
