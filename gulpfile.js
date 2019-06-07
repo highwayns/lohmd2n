@@ -366,10 +366,10 @@ gulp.task('DownloadData', function(){
 										break;
 									case 'Select':
 										fs.appendFileSync(fileName, '* title: ' + knowledgecontents[knowledgecontent].content.title + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.a + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.b + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.c + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.d + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.options.a + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.options.b + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.options.c + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.options.d + '\r\n', 'utf8') 
 										fs.appendFileSync(fileName, '* answer: ' + knowledgecontents[knowledgecontent].content.answer + '\r\n', 'utf8') 
 										break;
 									case 'Input':
@@ -388,10 +388,10 @@ gulp.task('DownloadData', function(){
 										break;
 									case 'MultiSelect':
 										fs.appendFileSync(fileName, '* title: ' + knowledgecontents[knowledgecontent].content.title + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.a + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.b + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.c + '\r\n', 'utf8') 
-										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.d + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* a: ' + knowledgecontents[knowledgecontent].content.options.a + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* b: ' + knowledgecontents[knowledgecontent].content.options.b + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* c: ' + knowledgecontents[knowledgecontent].content.options.c + '\r\n', 'utf8') 
+										fs.appendFileSync(fileName, '* d: ' + knowledgecontents[knowledgecontent].content.options.d + '\r\n', 'utf8') 
 										fs.appendFileSync(fileName, '* answer: ' + knowledgecontents[knowledgecontent].content.answer + '\r\n', 'utf8') 
 										break;
 									case 'Advertisment':

@@ -24,13 +24,13 @@ In this section, you will learn how to
   find syntax of PowerShell cmdlets
   and more
 
-As mentioned above, PowerShell commands are designed to have Verb-Noun structure, for instance `Get-Process`, `Set-Location`, `Clear-Host`, etc.
+As mentioned above, PowerShell commands are designed to have Verb-Noun structure, for instance 'Get-Process', 'Set-Location', 'Clear-Host', etc.
 Let’s exercise some of the basic PowerShell commands, also known as **cmdlets**.
 
 Please note that we will use the PowerShell prompt sign **PS />** as it appears on Linux in the following examples.
-It is shown as `PS C:\>` on  Windows.
+It is shown as 'PS C:\>' on  Windows.
 
-1. `Get-Process`: Gets the processes that are running on the local computer or a remote computer.
+1. 'Get-Process': Gets the processes that are running on the local computer or a remote computer.
 
 By default, you will get data back similar to the following:
 
@@ -45,7 +45,6 @@ Handles   NPM(K)    PM(K)     WS(K)     CPU(s)     Id    ProcessName
                                  74    403.150   1209    firefox
 
 …
-```
 
 Only interested in the instance of Firefox process that is running on your computer?
 
@@ -58,12 +57,11 @@ Handles   NPM(K)    PM(K)     WS(K)    CPU(s)     Id   ProcessName
 ------   -----      ----      ----     -----      -    -----------
                                  74   403.150   1209   firefox
 
-```
 
 Want to get back more than one process?
 Then just specify process names and separate them with commas.
 
-```powershell
+powershell
 PS /> Get-Process -Name firefox, powershell
 Handles   NPM(K)    PM(K)     WS(K)    CPU(s)     Id   ProcessName
 ------   -----      ----      ----     -----      -    -----------
@@ -72,20 +70,19 @@ Handles   NPM(K)    PM(K)     WS(K)    CPU(s)     Id   ProcessName
 
 ```
 
-1. `Clear-Host`: Clears the display in the host program.
-
-```powershell
+## 4.0 'Clear-Host': Clears the display in the host program.
+```
+powershell
 PS /> Get-Process
 PS /> Clear-Host
-```
 
 Type too much just for clearing the screen?
 
 Here is how the alias can help.
-
-1. `Get-Alias`: Gets the aliases for the current session.
-
-```powershell
+```
+## 5.0 'Get-Alias': Gets the aliases for the current session.
+```
+powershell
 Get-Alias
 
 CommandType     Name
@@ -102,43 +99,43 @@ Alias           gmo -> Get-Module
 Alias           ri -> Remove-Item
 Alias           type -> Get-Content
 …
-```
 
-As you can see `cls` or `clear` is an alias of `Clear-Host`.
+
+As you can see 'cls' or 'clear' is an alias of 'Clear-Host'.
 
 Now try it:
 
-```powershell
+powershell
 PS /> Get-Process
 PS /> cls
 ```
 
-1. `cd -> Set-Location`: Sets the current working location to a specified location.
-
-```powershell
+## 6.0 'cd -> Set-Location': Sets the current working location to a specified location.
+```
+powershell
 PS /> Set-Location /home
 PS /home>
 ```
 
-1. `dir -> Get-ChildItem`: Gets the items and child items in one or more specified locations.
-
-```powershell
-# Get all files under the current directory:
+## 7.0 'dir -> Get-ChildItem': Gets the items and child items in one or more specified locations.
+```
+powershell
+ Get all files under the current directory:
 PS /> Get-ChildItem
 
-# Get all files under the current directory as well as its subdirectories:
+ Get all files under the current directory as well as its subdirectories:
 PS /> cd $home
 PS /home/jen> dir -Recurse
 
-# List all files with "txt" file extension.
+ List all files with "txt" file extension.
 PS /> cd $home
 PS /home/jen> dir –Path *.txt -Recurse
 ```
 
-*6. `New-Item`: Creates a new item.
-
-```powershell
-# An empty file is created if you type the following:
+## 8.0 'New-Item': Creates a new item.
+```
+powershell
+ An empty file is created if you type the following:
 PS /home/jen> New-Item -Path ./test.txt
 
 
@@ -148,15 +145,14 @@ PS /home/jen> New-Item -Path ./test.txt
 Mode                LastWriteTime         Length  Name
 ---                 ------------          -----   ----
 -a---          7/7/2016   7:17 PM              0  test.txt
-```
 
-You can use the `-Value` parameter to add some data to your file.
+You can use the '-Value' parameter to add some data to your file.
 
-For example, the following command adds the phrase `Hello world!` as a file content to the `test.txt`.
+For example, the following command adds the phrase 'Hello world!' as a file content to the 'test.txt'.
 
-Because the test.txt file exists already, we use `-Force` parameter to replace the existing content.
+Because the test.txt file exists already, we use '-Force' parameter to replace the existing content.
 
-```powershell
+powershell
 PS /home/jen> New-Item -Path ./test.txt -Value "Hello world!" -Force
 
     Directory: /home/jen
@@ -166,52 +162,51 @@ Mode                LastWriteTime         Length  Name
 ---                 ------------          -----   ----
 -a---          7/7/2016   7:19 PM             24  test.txt
 
-```
 
 There are other ways to add some data to a file.
 
-For example, you can use `Set-Content` to set the file contents:
+For example, you can use 'Set-Content' to set the file contents:
 
-```powershell
+powershell
 PS /home/jen>Set-Content -Path ./test.txt -Value "Hello world again!"
-```
 
-Or simply use `>` as below:
 
-```powershell
-# create an empty file
+Or simply use '>' as below:
+
+powershell
+ create an empty file
 "" > test.txt
 
-# set "Hello world!" as content of test.txt file
+ set "Hello world!" as content of test.txt file
 "Hello world!!!" > test.txt
 
+
+
+The pound sign '#' above is used for comments in PowerShell.
 ```
-
-The pound sign `#` above is used for comments in PowerShell.
-
-1. `type -> Get-Content`: Gets the content of the item at the specified location.
-
-```powershell
+## 9.0 'type -> Get-Content': Gets the content of the item at the specified location.
+```
+powershell
 PS /home/jen> Get-Content -Path ./test.txt
 PS /home/jen> type -Path ./test.txt
 
 Hello world again!
 ```
 
-1. `del -> Remove-Item`: Deletes the specified items.
+## 10.0 'del -> Remove-Item': Deletes the specified items.
+```
+This cmdlet will delete the file '/home/jen/test.txt':
 
-This cmdlet will delete the file `/home/jen/test.txt`:
-
-```powershell
+powershell
 PS /home/jen> Remove-Item ./test.txt
 ```
 
-1. `$PSVersionTable`: Displays the version of PowerShell you are currently using.
-
-Type `$PSVersionTable` in your PowerShell session, you will see something like below.
+## 11.0 '$PSVersionTable': Displays the version of PowerShell you are currently using.
+```
+Type '$PSVersionTable' in your PowerShell session, you will see something like below.
 "PSVersion" indicates the PowerShell version that you are using.
 
-```powershell
+powershell
 Name                           Value
 ---                            -----
 PSVersion                      6.0.0-alpha
@@ -226,70 +221,64 @@ SerializationVersion           1.1.0.1
 
 ```
 
-1. `Exit`: To exit the PowerShell session, type `exit`.
-
-```powershell
+## 12.0 'Exit': To exit the PowerShell session, type 'exit'.
+```
+powershell
 exit
 ```
 
-## Need Help?
+## 13.0 Need Help?
+```
+The most important command in PowerShell is possibly the 'Get-Help', which allows you to quickly learn PowerShell without having to search around the internet.
 
-The most important command in PowerShell is possibly the `Get-Help`, which allows you to quickly learn PowerShell without having to search around the internet.
+The 'Get-Help' cmdlet also shows you how PowerShell commands work with examples.
 
-The `Get-Help` cmdlet also shows you how PowerShell commands work with examples.
+It shows the syntax and other technical information of the 'Get-Process' cmdlet.
 
-It shows the syntax and other technical information of the `Get-Process` cmdlet.
-
-```powershell
+powershell
 PS /> Get-Help -Name Get-Process
-```
 
-It displays the examples how to use the `Get-Process` cmdlet.
+It displays the examples how to use the 'Get-Process' cmdlet.
 
-```powershell
+powershell
 PS />Get-Help -Name Get-Process -Examples
+
+If you use **-Full** parameter, for example, 'Get-Help -Name Get-Process -Full', it will display more technical information.
 ```
+## 14.0 Discover Commands Available on Your System
+```
+You want to discover what PowerShell cmdlets available on your system? Just run 'Get-Command' as below:
 
-If you use **-Full** parameter, for example, `Get-Help -Name Get-Process -Full`, it will display more technical information.
-
-## Discover Commands Available on Your System
-
-You want to discover what PowerShell cmdlets available on your system? Just run `Get-Command` as below:
-
-```powershell
+powershell
 PS /> Get-Command
-```
 
 If you want to know whether a particular cmdlet exists on your system, you can do something like below:
 
-```powershell
+powershell
 PS /> Get-Command Get-Process
-```
 
-If you want to know the syntax of `Get-Process` cmdlet, type:
+If you want to know the syntax of 'Get-Process' cmdlet, type:
 
-```powershell
+powershell
 PS /> Get-Command Get-Process -Syntax
-```
 
-If you want to know how to use the `Get-Process`, type:
+If you want to know how to use the 'Get-Process', type:
 
-```powershell
+powershell
 PS /> Get-Help Get-Process -Example
 ```
 
-## PowerShell Pipeline `|`
-
+## 15.0 PowerShell Pipeline '|'
+```
 Sometimes when you run Get-ChildItem or "dir", you want to get a list of files and folders in a descending order.
 To achieve that, type:
 
-```powershell
+powershell
 PS /home/jen> dir | Sort-Object -Descending
-```
 
 Say you want to get the largest file in a directory
 
-```powershell
+powershell
 PS /home/jen> dir | Sort-Object -Property Length -Descending | Select-Object -First 1
 
 
@@ -302,13 +291,13 @@ Mode                LastWriteTime       Length  Name
 
 ```
 
-## How to Create and Run PowerShell scripts
-
-You can use Visual Studio Code or your favorite editor to create a PowerShell script and save it with a `.ps1` file extension.
+## 16.0 How to Create and Run PowerShell scripts
+```
+You can use Visual Studio Code or your favorite editor to create a PowerShell script and save it with a '.ps1' file extension.
 For more details, see [Create and Run PowerShell Script Guide][create-run-script]
-
-## Recommended Training and Reading
-
+```
+## 17.0 Recommended Training and Reading
+```
   Video: [Get Started with PowerShell][remoting] from Channel9
   [eBooks from PowerShell.org](https://leanpub.com/u/devopscollective)
   [eBooks from PowerShell.com][ebooks-powershell.com]
@@ -324,9 +313,9 @@ For more details, see [Create and Run PowerShell Script Guide][create-run-script
   [Samples for Writing a PowerShell Script Module][examples-ps-module]
   [Writing a PowerShell module in C#][writing-ps-module]
   [Examples of Cmdlets Code][sample-code]
-
-## Commercial Resources
-
+```
+## 18.0 Commercial Resources
+```
   [Windows PowerShell in Action][in-action] by Bruce Payette
   [Windows PowerShell Cookbook][cookbook] by Lee Holmes
 
@@ -347,3 +336,6 @@ For more details, see [Create and Run PowerShell Script Guide][create-run-script
 [writing-ps-module]:https://www.powershellmagazine.com/2014/03/18/writing-a-powershell-module-in-c-part-1-the-basics/
 [sample-code]:https://msdn.microsoft.com/library/ff602031%28v=vs.85%29.aspx
 [create-run-script]:./create-powershell-scripts.md
+```
+## 19.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

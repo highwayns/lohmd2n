@@ -192,7 +192,7 @@ AWSのS3にファイルを配置して、テストしてみました。
 index.html
 <!DOCTYPE html>  
 <div>  
-  <h2>HTTP Live Streaming</h2>
+  <h 2>HTTP Live Streaming</h 2>
   <video src="index.m3u8" width=640 height=360 controls></video>
 </div>  
 

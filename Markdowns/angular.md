@@ -229,7 +229,7 @@ src/app/heroes/heroes.component.ts
 ## 14.0 ヒーローオブジェクトを表示する
 ```
 heroes.component.html (HeroesComponent のテンプレート)
-    <h 2>{{hero.name}} Details</h2>
+    <h 2>{{hero.name}} Details</h 2>
     <div><span>id: </span>{{hero.id}}</div>
     <div><span>name: </span>{{hero.name}}</div>
 ```
@@ -316,7 +316,7 @@ src/app/heroes/heroes.component.ts (import HEROES)
     }
 
 heroes.component.html (heroes template)
-    <h 2>My Heroes</h2>
+    <h 2>My Heroes</h 2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
@@ -329,7 +329,7 @@ heroes.component.html (heroes template)
 src/app/heroes/heroes.component.html (*ngIf)
     <div *ngIf="selectedHero">
 
-    <h 2>{{selectedHero.name | uppercase}} Details</h2>
+    <h 2>{{selectedHero.name | uppercase}} Details</h 2>
     <div><span>id: </span>{{selectedHero.id}}</div>
     <div>
         <label>name:
@@ -347,7 +347,7 @@ ng generate component hero-detail
 src/app/hero-detail/hero-detail.component.html
     <div *ngIf="hero">
 
-    <h 2>{{hero.name | uppercase}} Details</h2>
+    <h 2>{{hero.name | uppercase}} Details</h 2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
         <label>name:
@@ -369,7 +369,7 @@ src/app/hero-detail/hero.component.ts
     import { Component, OnInit, Input } from '@angular/core';
     @Input() hero: Hero;
 heroes.component.html
-    <h 2>My Heroes</h2>
+    <h 2>My Heroes</h 2>
 
     <ul class="heroes">
     <li *ngFor="let hero of heroes"
@@ -471,7 +471,7 @@ ng generate component messages
 src/app/messages/messages.component.html
     <div *ngIf="messageService.messages.length">
 
-    <h 2>Messages</h2>
+    <h 2>Messages</h 2>
     <button class="clear"
             (click)="messageService.clear()">clear</button>
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
