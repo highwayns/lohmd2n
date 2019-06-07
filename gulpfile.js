@@ -76,7 +76,7 @@ gulp.task('MD2JSON',function(){
 			var myRe_audioPath = /<li[^>]*>audioPath: ([^<]*)<\/li>/g;
 			var myRe_flashPath = /<li[^>]*>flashPath: ([^<]*)<\/li>/g;
 			var myRe_advertismentPath = /<li[^>]*>advertismentPath: ([^<]*)<\/li>/g;
-			var myRe_advertismentLink = /<li[^>]*>advertismentLink: ([^<]*)<\/li>/g;
+			var myRe_advertismentLink = /<li[^>]*>link: ([^<]*)<\/li>/g;
 			let i = 1;
 			while ((matches = myRe.exec(data.body)) !== null) {
 			  const title = matches[1]
@@ -111,12 +111,12 @@ gulp.task('MD2JSON',function(){
 				  };
 				  break
 				case '1':
+				  const optiontitle = myRe_title.exec(data.body)[1]
 				  const a = myRe_a.exec(data.body)[1]
 				  const b = myRe_b.exec(data.body)[1]
 				  const c = myRe_c.exec(data.body)[1]
 				  const d = myRe_d.exec(data.body)[1]
 				  const answer = myRe_answer.exec(data.body)[1]
-				  const optiontitle = myRe_title.exec(data.body)[1]
 				  contents[key] = {
 					  "avatar" : authorid,
 					  "comment_count" : 0,
@@ -217,12 +217,12 @@ gulp.task('MD2JSON',function(){
 				  };
 				  break
 				case '6':
+				  const moptiontitle = myRe_title.exec(data.body)[1]
 				  const ma = myRe_a.exec(data.body)[1]
 				  const mb = myRe_b.exec(data.body)[1]
 				  const mc = myRe_c.exec(data.body)[1]
 				  const md = myRe_d.exec(data.body)[1]
 				  const manswer = myRe_answer.exec(data.body)[1]
-				  const moptiontitle = myRe_title.exec(data.body)[1]
 				  contents[key] = {
 					  "avatar" : authorid,
 					  "comment_count" : 0,
