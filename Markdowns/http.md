@@ -1,3 +1,9 @@
+HTTP 入門
+====
+* knowledgeid: -LdLtaiBADqiIat-6k_49
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+
 ## 1.0 URI
 ```
 URI 包含 URL 和 URN。
@@ -755,3 +761,5 @@ XMLHttpRequest
  在使用 XMLHttpRequest 的 POST 方法时，浏览器会先发送 Header 再发送 Data。但并不是所有浏览器会这么做，例如火狐就不会。
  而 GET 方法 Header 和 Data 会一起发送。
 ```
+## 24.9 御修了ありがとうございました。
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20

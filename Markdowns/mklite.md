@@ -553,4 +553,4 @@ app/build.gradleに記載されているapplicationIdをAndroidパッケージ�
 * picturePath: https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2018/08/3b3ca3e306e7b59a3d9e05d93e60d84d-640x280.png
 
 ## 18.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_6x20?alt=media&token=f0e2cfb7-e8c8-47aa-9994-5714d5bf6a34

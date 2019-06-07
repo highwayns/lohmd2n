@@ -1234,4 +1234,4 @@ waitpid() 调用变成非阻塞的，也就是说它会立即返回，父进程�
 ```
 
 ## 55.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLwITanyNoAGvVvlChx55?alt=media&token=d18e98bf-4c63-4d3a-b183-ca0e080dfc56

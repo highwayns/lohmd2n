@@ -1,22 +1,28 @@
-# PowerShell Beginner’s Guide
+PowerShell 入門
+====
+* knowledgeid: -LdLtaiBADqiIat-6k_4a
+* author: tei952
+* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
+## 1.0 PowerShell Beginner’s Guide
+```
 If you are new to PowerShell, this document will walk you through a few examples to give you some basic ideas of PowerShell.
 We recommend that you open a PowerShell console/session and type along with the instructions in this document to get most out of this exercise.
-
-## Launch PowerShell Console/Session
-
+```
+## 2.0 Launch PowerShell Console/Session
+```
 First you need to launch a PowerShell session by following the [Installing PowerShell Guide](./README.md#installing-powershell).
-
-## Getting Familiar with PowerShell Commands
-
+```
+## 3.0 Getting Familiar with PowerShell Commands
+```
 In this section, you will learn how to
 
-- create a file, delete a file and change file directory
-- discover what version of PowerShell you are currently using
-- exit a PowerShell session
-- get help if you needed
-- find syntax of PowerShell cmdlets
-- and more
+  create a file, delete a file and change file directory
+  discover what version of PowerShell you are currently using
+  exit a PowerShell session
+  get help if you needed
+  find syntax of PowerShell cmdlets
+  and more
 
 As mentioned above, PowerShell commands are designed to have Verb-Noun structure, for instance `Get-Process`, `Set-Location`, `Clear-Host`, etc.
 Let’s exercise some of the basic PowerShell commands, also known as **cmdlets**.
@@ -28,15 +34,15 @@ It is shown as `PS C:\>` on  Windows.
 
 By default, you will get data back similar to the following:
 
-```powershell
+powershell
 PS /> Get-Process
 
 Handles   NPM(K)    PM(K)     WS(K)     CPU(s)     Id    ProcessName
--------  ------     -----     -----     ------     --    -----------
-    -      -          -           1      0.012     12    bash
-    -      -          -          21     20.220    449    powershell
-    -      -          -          11     61.630   8620    code
-    -      -          -          74    403.150   1209    firefox
+------   -----      ----      ----      -----      -     -----------
+                                  1      0.012     12    bash
+                                 21     20.220    449    powershell
+                                 11     61.630   8620    code
+                                 74    403.150   1209    firefox
 
 …
 ```
@@ -45,12 +51,12 @@ Only interested in the instance of Firefox process that is running on your compu
 
 Try this:
 
-```powershell
+powershell
 PS /> Get-Process -Name firefox
 
 Handles   NPM(K)    PM(K)     WS(K)    CPU(s)     Id   ProcessName
--------  ------     -----     -----    ------     --   -----------
-    -      -          -          74   403.150   1209   firefox
+------   -----      ----      ----     -----      -    -----------
+                                 74   403.150   1209   firefox
 
 ```
 
@@ -60,9 +66,9 @@ Then just specify process names and separate them with commas.
 ```powershell
 PS /> Get-Process -Name firefox, powershell
 Handles   NPM(K)    PM(K)     WS(K)    CPU(s)     Id   ProcessName
--------  ------     -----     -----    ------     --   -----------
-    -      -          -          74   403.150   1209   firefox
-    -      -          -          21    20.220    449   powershell
+------   -----      ----      ----     -----      -    -----------
+                                 74   403.150   1209   firefox
+                                 21    20.220    449   powershell
 
 ```
 
@@ -83,7 +89,7 @@ Here is how the alias can help.
 Get-Alias
 
 CommandType     Name
------------     ----
+----------      ----
 …
 
 Alias           cd -> Set-Location
@@ -140,8 +146,8 @@ PS /home/jen> New-Item -Path ./test.txt
 
 
 Mode                LastWriteTime         Length  Name
-----                -------------         ------  ----
--a----         7/7/2016   7:17 PM              0  test.txt
+---                 ------------          -----   ----
+-a---          7/7/2016   7:17 PM              0  test.txt
 ```
 
 You can use the `-Value` parameter to add some data to your file.
@@ -157,8 +163,8 @@ PS /home/jen> New-Item -Path ./test.txt -Value "Hello world!" -Force
 
 
 Mode                LastWriteTime         Length  Name
-----                -------------         ------  ----
--a----         7/7/2016   7:19 PM             24  test.txt
+---                 ------------          -----   ----
+-a---          7/7/2016   7:19 PM             24  test.txt
 
 ```
 
@@ -207,7 +213,7 @@ Type `$PSVersionTable` in your PowerShell session, you will see something like b
 
 ```powershell
 Name                           Value
-----                           -----
+---                            -----
 PSVersion                      6.0.0-alpha
 PSEdition                      Core
 PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
@@ -291,8 +297,8 @@ PS /home/jen> dir | Sort-Object -Property Length -Descending | Select-Object -Fi
 
 
 Mode                LastWriteTime       Length  Name
-----                -------------       ------  ----
--a----        5/16/2016   1:15 PM        32972  test.log
+---                 ------------        -----   ----
+-a---         5/16/2016   1:15 PM        32972  test.log
 
 ```
 
@@ -303,26 +309,26 @@ For more details, see [Create and Run PowerShell Script Guide][create-run-script
 
 ## Recommended Training and Reading
 
-- Video: [Get Started with PowerShell][remoting] from Channel9
-- [eBooks from PowerShell.org](https://leanpub.com/u/devopscollective)
-- [eBooks from PowerShell.com][ebooks-powershell.com]
-- [eBooks List][ebook-list] by Martin Schvartzman
-- [Tutorial from MVP][tutorial]
-- Script Guy blog: [The best way to Learn PowerShell][to-learn]
-- [Understanding PowerShell Module][ps-module]
-- [How and When to Create PowerShell Module][create-ps-module] by Adam Bertram
-- Video: [PowerShell Remoting in Depth][in-depth] from Channel9
-- [PowerShell Basics: Remote Management][remote-mgmt] from ITPro
-- [Running Remote Commands][remote-commands] from PowerShell Web Docs
-- [Samples for PowerShell Scripts][examples]
-- [Samples for Writing a PowerShell Script Module][examples-ps-module]
-- [Writing a PowerShell module in C#][writing-ps-module]
-- [Examples of Cmdlets Code][sample-code]
+  Video: [Get Started with PowerShell][remoting] from Channel9
+  [eBooks from PowerShell.org](https://leanpub.com/u/devopscollective)
+  [eBooks from PowerShell.com][ebooks-powershell.com]
+  [eBooks List][ebook-list] by Martin Schvartzman
+  [Tutorial from MVP][tutorial]
+  Script Guy blog: [The best way to Learn PowerShell][to-learn]
+  [Understanding PowerShell Module][ps-module]
+  [How and When to Create PowerShell Module][create-ps-module] by Adam Bertram
+  Video: [PowerShell Remoting in Depth][in-depth] from Channel9
+  [PowerShell Basics: Remote Management][remote-mgmt] from ITPro
+  [Running Remote Commands][remote-commands] from PowerShell Web Docs
+  [Samples for PowerShell Scripts][examples]
+  [Samples for Writing a PowerShell Script Module][examples-ps-module]
+  [Writing a PowerShell module in C#][writing-ps-module]
+  [Examples of Cmdlets Code][sample-code]
 
 ## Commercial Resources
 
-- [Windows PowerShell in Action][in-action] by Bruce Payette
-- [Windows PowerShell Cookbook][cookbook] by Lee Holmes
+  [Windows PowerShell in Action][in-action] by Bruce Payette
+  [Windows PowerShell Cookbook][cookbook] by Lee Holmes
 
 [in-action]: https://www.amazon.com/Windows-PowerShell-Action-Bruce-Payette/dp/1633430294
 [cookbook]: http://shop.oreilly.com/product/9780596801519.do
