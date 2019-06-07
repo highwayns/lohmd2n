@@ -323,7 +323,8 @@ gulp.task('MD2JSON',function(){
 gulp.task('MergeJSON',function(){
 	gulp.src('./JSONs/**/*.json')
 	.pipe(merge())
-	.pipe(gulp.dest('./dist'));
+	.pipe(gulp.dest('./dist'))
+	.pipe(exit());
 });
 
 // Watching
@@ -412,9 +413,10 @@ gulp.task('DownloadData', function(){
 				})
 		  })
 		}
+		exit();
 	})
 	auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
-}).pipe(exit());
+})
 // Upload to firebase
 gulp.task('UploadData', function(){
 	auth.onAuthStateChanged(function(user) {
@@ -445,9 +447,10 @@ gulp.task('UploadData', function(){
 			})
 		  })
 		}
+		exit();
 	  })
 	  auth.signInWithEmailAndPassword('zhengjun@jp.highwayns.com', 'zjhuen1915')	
-}).pipe(exit());
+})
 
 const pdf2png = require("pdf2png-mp2/lib/pdf2png.js");
 gulp.task('PDF2Png', function(){
@@ -467,8 +470,9 @@ gulp.task('PDF2Png', function(){
 				console.log("The file was saved!");
 			}
 		});
-	});	
-}).pipe(exit());
+		exit();	
+	});
+})
 
 const ppt2png = require('ppt2png');
 gulp.task('PPT2Png', function(){
@@ -478,5 +482,6 @@ gulp.task('PPT2Png', function(){
 		} else {
 			console.log('convert successful.');
 		}
+		exit();
 	});
-}).pipe(exit());
+})

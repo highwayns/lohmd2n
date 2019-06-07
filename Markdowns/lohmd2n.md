@@ -18,9 +18,9 @@ NOTE: 命令都是在终端里进行的。
 
 1 下载并解压或者clone到本地
 2 进入LOHMD2N 目录，
-3 执行命令：`npm install `
-4 然后把需要批量转换的Markdown 文件放到 `./Markdowns` 目录下。
-5 执行命令: `gulp`
+3 执行命令：'npm install '
+4 然后把需要批量转换的Markdown 文件放到 './Markdowns' 目录下。
+5 执行命令: 'gulp'
 6 工具会自动把Markdown 文件批量转换成相应的文件。
 ```
 
