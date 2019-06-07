@@ -73,7 +73,7 @@ var messaging = app.messaging();
 var storage = app.storage();
 // The above is shorthand for:
 // var storage = firebase.storage(app);
-``` 
+```
 
 ## 3.0 auth
 ```
@@ -93,9 +93,9 @@ The currently signed-in user (or null).
  languageCode: string | null
  
 The current Auth instance's language code. This is a readable/writable property. When set to null, the default Firebase Console language setting is applied. The language code will propagate to email action templates (password reset, email verification and email change revocation), SMS templates for phone authentication, reCAPTCHA verifier and OAuth popup/redirect operations provided the specified providers support localization with the language code specified.
-``` 
+```
 ## 4.0 settings: AuthSettings
- ```
+```
 The current Auth instance's settings. This is used to edit/read configuration related options like app verification mode for phone authentication.
  
  applyActionCode(code: string): Promise<void>
@@ -181,9 +181,9 @@ auth.getRedirectResult().then(function(result) {
     });
   }
 });
-``` 
+```
 ## 6.0 isSignInWithEmailLink(emailLink: string): boolean
-``` 
+```
 Checks if an incoming link is a sign-in with email link.
  
  onAuthStateChanged(nextOrObserver: Observer<any> | function, error?: function, completed?: firebase.Unsubscribe): firebase.Unsubscribe
@@ -252,7 +252,7 @@ firebase.auth().sendSignInLinkToEmail('user@example.com', actionCodeSettings)
     .catch(function(error) {
       // Some error occurred, you can inspect the code: error.code
     });
-``` 
+```
 ## 7.0 setPersistence(persistence: Persistence): Promise<void>
 ```
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
@@ -378,7 +378,7 @@ firebase.auth().signInWithEmailLink(email, emailLink)
     });
 ```
 ## 10.0 signInWithPhoneNumber(phoneNumber: string, applicationVerifier: ApplicationVerifier): Promise<ConfirmationResult>
-``` 
+```
 // 'recaptcha-container' is the ID of an element in the DOM.
 var applicationVerifier = new firebase.auth.RecaptchaVerifier(
     'recaptcha-container');
@@ -439,7 +439,7 @@ Sets the current language to the default device/browser preference.
  verifyPasswordResetCode
  
 Checks a password reset code sent to the user by email or other out-of-band mechanism.
-``` 
+```
 ## 12.0 database
 ```
 firebase. database 
@@ -458,7 +458,7 @@ firebase.database.enableLogging(function(message) {
 ```
 ## 13.0 firebase.database.Database
 ```
- app: App
+app: App
  
 var app = database.app;
  
@@ -486,7 +486,6 @@ var adaRef = firebase.database().ref("users/ada");
  
 // Get a reference to the root of the Database
 var rootRef = firebase.database().ref("https://<DATABASE_NAME>.firebaseio.com");
- 
 ```
 ## 14.0 firebase.database.DataSnapshot
 ```
@@ -668,7 +667,6 @@ ref.set({ name: "Ada", age: 36 })
     // data.name === "Ada"
     // data.age === 36
   });
- 
 ```
 ## 16.0 firebase.database.OnDisconnect 
 ```
@@ -704,7 +702,6 @@ ref.onDisconnect().update({
   onlineState: false,
   status: "I'm offline."
 });
- 
 ```
 ## 17.0 firebase.database.Reference 
 ```
@@ -720,9 +717,9 @@ var key = rootRef.key;  // key === null
 var adaRef = firebase.database().ref("users/ada");
 var key = adaRef.key;  // key === "ada"
 key = adaRef.child("name/last").key;  // key === "last"
-``` 
+```
 ## 18.0 parent: Reference | null
-``` 
+```
 // The parent of a root reference is null
 var rootRef = firebase.database().ref();
 parent = rootRef.parent;  // parent === null
@@ -740,9 +737,9 @@ Returns a Reference to the Query's location.
 // The root of a root reference is itself
 var rootRef = firebase.database().ref();
 // rootRef and rootRef.root represent the same location
-``` 
+```
 ## 19.0 child(path: string): Reference
-``` 
+```
 var usersRef = firebase.database().ref('users');
 var adaRef = usersRef.child('ada');
 var adaFirstNameRef = adaRef.child('name/first');
@@ -774,10 +771,9 @@ var ref = firebase.database().ref("dinosaurs");
 ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
   console.log(snapshot.key);
 });
- 
 ```
 ## 20.0 isEqual(other: Query | null): boolean
-``` 
+```
 var rootRef = firebase.database.ref();
 var usersRef = rootRef.child("users");
 usersRef.isEqual(rootRef);  // false
@@ -810,10 +806,9 @@ ref.orderByChild("height").limitToFirst(2).on("child_added", function(snapshot) 
   // shortest.
   console.log(snapshot.key);
 });
- 
 ```
 ## 21.0 off(eventType?: EventType, callback?: function, context?: Object | null): any
-``` 
+```
 var onValueChange = function(dataSnapshot) {  ... };
 ref.on('value', onValueChange);
 ref.child('meta-data').on('child_added', onChildAdded);
@@ -829,10 +824,9 @@ ref.child('meta-data').off('child_added', onValueAdded);
 var onValueChange = ref.on('value', function(dataSnapshot) { ... });
 // Sometime later...
 ref.off('value', onValueChange);
- 
 ```
 ## 22.0 on(eventType: EventType, callback: function, cancelCallbackOrContext?: Object | null, context?: Object | null): function
-``` 
+```
 ref.on('value', function(dataSnapshot) {
   ...
 });
@@ -852,10 +846,9 @@ ref.on('child_changed', function(childSnapshot, prevChildKey) {
 ref.on('child_moved', function(childSnapshot, prevChildKey) {
   ...
 });
- 
 ```
 ## 23.0 once(eventType: EventType, successCallback?: function, failureCallbackOrContext?: Object | null, context?: Object | null): Promise<DataSnapshot>
-``` 
+```
 // Basic usage of .once() to read the data located at ref.
 ref.once('value')
   .then(function(dataSnapshot) {
@@ -867,10 +860,9 @@ var ref = firebase.database().ref("dinosaurs");
 ref.orderByChild("height").on("child_added", function(snapshot) {
   console.log(snapshot.key + " was " + snapshot.val().height + " m tall");
 });
- 
 ```
 ## 24.0 orderByKey(): Query
-``` 
+```
 var ref = firebase.database().ref("dinosaurs");
 ref.orderByKey().on("child_added", function(snapshot) {
   console.log(snapshot.key);
@@ -887,9 +879,9 @@ scoresRef.orderByValue().limitToLast(3).on("value", function(snapshot) {
     console.log("The " + data.key + " score is " + data.val());
   });
 });
-``` 
+```
 ## 25.0 toString(): string
-``` 
+```
 // Calling toString() on a root Firebase reference returns the URL where its
 // data is stored within the Database:
 var rootRef = firebase.database().ref();
@@ -901,10 +893,9 @@ var rootUrl = rootRef.toString();
 var adaRef = rootRef.child('users/ada');
 var adaURL = adaRef.toString();
 // adaURL === "https://sample-app.firebaseio.com/users/ada".
- 
 ```
 ## 26.0 toJSON(): Object
-``` 
+```
 // Calling toString() on a root Firebase reference returns the URL where its
 // data is stored within the Database:
 var rootRef = firebase.database().ref();
@@ -920,7 +911,7 @@ var adaURL = adaRef.toString();
  onDisconnect(): OnDisconnect
 ```
 ## 27.0 push(value?: any, onComplete?: function): ThenableReference
-``` 
+```
 var messageListRef = firebase.database().ref('message_list');
 var newMessageRef = messageListRef.push();
 newMessageRef.set({
@@ -942,9 +933,9 @@ adaRef.remove()
   .catch(function(error) {
     console.log("Remove failed: " + error.message)
   });
-``` 
+```
 ## 28.0 set(value: any, onComplete?: function): Promise<any>
-``` 
+```
 var adaNameRef = firebase.database().ref('users/ada/name');
 adaNameRef.child('first').set('Ada');
 adaNameRef.child('last').set('Lovelace');
@@ -957,7 +948,7 @@ Sets a priority for the data at this Database location.
 Writes data the Database location. Like set() but also specifies the priority for that data.
 ```
 ## 29.0 transaction(transactionUpdate: function, onComplete?: function, applyLocally?: boolean): Promise<any>
-``` 
+```
 // Increment Ada's rank by 1.
 var adaRankRef = firebase.database().ref('users/ada/rank');
 adaRankRef.transaction(function(currentRank) {
@@ -993,7 +984,6 @@ var adaNameRef = firebase.database().ref('users/ada/name');
 // Modify the 'first' and 'last' properties, but leave other data at
 // adaNameRef unchanged.
 adaNameRef.update({ first: 'Ada', last: 'Lovelace' });
- 
 ```
 ## 30.0 firebase.database.ServerValue 
 ```
@@ -1003,7 +993,7 @@ var sessionsRef = firebase.database().ref("sessions");
 sessionsRef.push({
   startedAt: firebase.database.ServerValue.TIMESTAMP
 });
-``` 
+```
 ## 31.0 firebase.database.ThenableReference 
 ```
 Properties
@@ -1086,7 +1076,7 @@ firebase.initializeApp({
   storageBucket: "YOUR_APP.appspot.com",          // Storage
   messagingSenderId: "123456789"                  // Cloud Messaging
 });
-``` 
+```
 ## 35.0 firebase.firestore 
 ```
 Classes

@@ -27,7 +27,8 @@ nMarked.setOptions({
 gulp.task('MD2HTML',function(){
 	gulp.src('./Markdowns/**/*.md')
 		.pipe(gMarkdownToHtml())
-		.pipe(gulp.dest('./HTMLs'));
+		.pipe(gulp.dest('./HTMLs'))
+		pipe(exit());
 });
 
 // Markdown to PDF
@@ -35,7 +36,8 @@ gulp.task('MD2HTML',function(){
 gulp.task('MD2PDF',function(){
 	gulp.src('./Markdowns/**/*.md')
 		.pipe(gMarkdownPDF())
-		.pipe(gulp.dest('./PDFs'));
+		.pipe(gulp.dest('./PDFs')
+		.pipe(exit()));
 });
 
 // Markdown to JSON
@@ -315,7 +317,8 @@ gulp.task('MD2JSON',function(){
 			data.knowledgecontents = result;
 			return data;
 		}))
-		.pipe(gulp.dest('./JSONs'));
+		.pipe(gulp.dest('./JSONs')
+		.pipe(exit()));
 });
 
 // MergeJSON
