@@ -28,7 +28,7 @@ gulp.task('MD2HTML',function(){
 	gulp.src('./Markdowns/**/*.md')
 		.pipe(gMarkdownToHtml())
 		.pipe(gulp.dest('./HTMLs'))
-		pipe(exit());
+		.pipe(exit());
 });
 
 // Markdown to PDF
@@ -318,7 +318,7 @@ gulp.task('MD2JSON',function(){
 			return data;
 		}))
 		.pipe(gulp.dest('./JSONs')
-		.pipe(exit()));
+	);
 });
 
 // MergeJSON
@@ -456,30 +456,48 @@ gulp.task('UploadData', function(){
 })
 
 const pdf2png = require("pdf2png-mp2/lib/pdf2png.js");
+var projectPath = __dirname.split("\\");
+projectPath.pop();
+projectPath = projectPath.join("\\");
+
+var gsPath = projectPath + "\\executables\\ghostScript";
+
+pdf2png.ghostscriptPath = gsPath;
 gulp.task('PDF2Png', function(){
-	// Most simple example
-	pdf2png.convert("./PDFs/angular.pdf", function(resp){
+	var option, i = process.argv.indexOf("--option");
+	if(i>-1) {
+		option = process.argv[i+1];
+	}	
+	console.log('option=' + option);
+	pdf2png.convert("./PDFs/" + option + ".pdf",  { returnFilePath: true }, function(resp){
 		if(!resp.success)
 		{
 			console.log("Something went wrong: " + resp.error);
+			
 			return;
 		}
+		
 		console.log("Yayy the pdf got converted, now I'm gonna save it!");
-		fs.writeFile("./PNGs/example_simple.png", resp.data, function(err) {
-			if(err) {
-				console.log(err);
-			}
-			else {
-				console.log("The file was saved!");
-			}
-		});
+		console.log(resp.data);
+		for(var idx = 0; idx < resp.data.length; idx ++) {
+			var img = fs.readFileSync(resp.data[idx]);
+		
+			fs.writeFile("PNGs/" + option + "/"+ idx +".png", img, function(err) {
+				if(err) {
+					console.log(err);
+				}
+				else {
+					console.log("The file was saved!");
+				}
+			}); 	
+		}
 		exit();	
 	});
 })
 
 const ppt2png = require('ppt2png');
 gulp.task('PPT2Png', function(){
-	ppt2png('./PPTs/foo.ppt', './PNGs', function( err ){
+	ppt2png('./PPTs/pythonintro.ppt', './PNGs', function( err ){
 		if(err) {
 			console.log(err);
 		} else {
