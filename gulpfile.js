@@ -469,6 +469,9 @@ gulp.task('PDF2Png', function(){
 		option = process.argv[i+1];
 	}	
 	console.log('option=' + option);
+	fs.mkdir('PNGs/' + option, { recursive: true }, (err) => {
+		if (err) throw err;
+	});	
 	pdf2png.convert("./PDFs/" + option + ".pdf",  { returnFilePath: true }, function(resp){
 		if(!resp.success)
 		{
