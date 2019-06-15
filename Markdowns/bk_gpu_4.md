@@ -4,6 +4,6 @@ gpu Book
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 
-## 0.4 第301页
-* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/android/300.png?raw=true
+## 1.4 第301页
+* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/gpu/300.png?raw=true
 
