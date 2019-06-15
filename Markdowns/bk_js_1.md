@@ -1,6 +1,6 @@
-android Book
+js Book
 ===
-* knowledgeid: -LdLubY6J4gW1t94t63x_android_1
+* knowledgeid: -LdLubY6J4gW1t94t63x_js_1
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 

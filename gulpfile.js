@@ -509,3 +509,31 @@ gulp.task('PPT2Png', function(){
 		exit();
 	});
 })
+
+gulp.task('PNG2MD', function(){
+	fs.readdir('./PNGs', (err, dirs) => {
+		dirs.forEach(dir => {
+			console.log('dir=' + dir);
+			fs.readdir('./PNGs/' + dir, (err, files) => {
+				console.log('files.length=' + files.length);
+				let contentidx = 0	
+				for(var idx = 0; idx < files.length; idx ++) {
+					if (idx % 100 === 0) {
+						contentidx++
+						fs.writeFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", dir + ' Book' + '\r\n', 'utf8')
+						fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '===' + '\r\n', 'utf8')
+						fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '* knowledgeid: -LdLubY6J4gW1t94t63x_' + dir + '_' + contentidx + '\r\n', 'utf8')
+						fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '* author: tei952' + '\r\n', 'utf8')
+						fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '* authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2' + '\r\n', 'utf8')
+						fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '\r\n', 'utf8')
+					}
+					const nodeidx = idx - 100 * (contentidx - 1)
+					const pageidx = idx + 1
+					fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '## '+nodeidx+'.4 第'+ pageidx +'页' + '\r\n', 'utf8')
+					fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/android/'+idx+'.png?raw=true' + '\r\n', 'utf8')
+					fs.appendFileSync("Markdowns/bk_" + dir + "_" + contentidx +".md", '\r\n', 'utf8')
+				}
+			});
+		});
+	});
+})

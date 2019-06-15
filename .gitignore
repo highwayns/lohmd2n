@@ -7,3 +7,6 @@ JSONs
 PDFs
 dist
 PPTs
+firebaseConfig.js
+firechat.js
+gulpfile.js
