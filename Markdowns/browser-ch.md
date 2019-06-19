@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_d
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 10
 
 ## 1.0 事件触发三阶段
 ```

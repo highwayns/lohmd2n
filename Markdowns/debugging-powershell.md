@@ -3,6 +3,8 @@ Debugging in PowerShell
 * knowledgeid: -LdLtaiBADqiIat-6k_43
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 5
 
 ## 1.0 Debugging in PowerShell Command-line
 ```

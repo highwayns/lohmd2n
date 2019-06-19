@@ -3,6 +3,8 @@ csharp Book
 * knowledgeid: -LdLubY6J4gW1t94t63x_csharp_3
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 1
 
 ## 1.4 第201页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/csharp/200.png?raw=true

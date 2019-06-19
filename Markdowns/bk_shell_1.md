@@ -3,6 +3,8 @@ shell Book
 * knowledgeid: -LdLubY6J4gW1t94t63x_shell_1
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 5
 
 ## 1.4 第1页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/shell/0.png?raw=true

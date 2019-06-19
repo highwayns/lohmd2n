@@ -3,6 +3,8 @@ create powershell scripts
 * knowledgeid: -LdLtaiBADqiIat-6k_42
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 5
 
 ## 1.0 How to Create and Run PowerShell Scripts
 ```

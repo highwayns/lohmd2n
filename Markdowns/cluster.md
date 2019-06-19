@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_31
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 8
 
 ## 1.0 负载均衡
 ```

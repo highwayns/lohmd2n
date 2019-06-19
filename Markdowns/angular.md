@@ -3,6 +3,8 @@ Angular Document
 * knowledgeid: -LbW07Cj8C37LDyZeKHF
 * author: test1
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
+* language: jp
+* knowledgetype: 6
 
 ## 1.0 Angularへようこそ
 ```
