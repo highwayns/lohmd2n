@@ -3,6 +3,8 @@ Hybrid Devlopment Guidline
 * knowledgeid: -Ld495mtWIyObJzEEK7s
 * author: test1
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
+* language: jp
+* knowledgetype: 3
 
 ## 1.0 Git
 ```

@@ -3,6 +3,8 @@ Tensorflow.js
 * knowledgeid: -LdLtaiBADqiIat-6k_7
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 4
 
 ## 1.0 Generate an Angular App
 ```

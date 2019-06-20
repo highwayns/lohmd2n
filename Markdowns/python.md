@@ -3,6 +3,8 @@
 * knowledgeid: -LdLubY6J4gW1t94t63x
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: jp
+* knowledgetype: 1
 
 ## 1.4 課程紹介
 * picturePath: http://jp.highwayns.com/study_1/pythonintro/幻灯片1.PNG

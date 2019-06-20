@@ -3,6 +3,8 @@ JAVA入門
 * knowledgeid: -LdLtaiBADqiIat-6k_9
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: jp
+* knowledgetype: 1
 
 
 ## 1.0 Java 開発環境

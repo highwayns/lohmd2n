@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_c
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 6
 
 ## 1.0 DNS 预解析
 ```

@@ -3,6 +3,8 @@
 * knowledgeid: -LdLwZEoLZc4i2v8T5QR
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 10
 
 ## 1.0 花时间补基础，读文档
 ```

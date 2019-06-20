@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_35
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 5
 
 ## 1.0 构建工具的作用
 ```

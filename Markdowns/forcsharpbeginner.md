@@ -3,6 +3,8 @@ C# For Beginner
 * knowledgeid: -LbYZZXvYQxtpo2AWpzL
 * author: test1
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
+* language: jp
+* knowledgetype: 1
 
 ## 1.0 数の進数
 ```

@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_33
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 6
 
 ## 1.0 概述
 ```

@@ -3,6 +3,8 @@ Gulp 入門
 * knowledgeid: -LdLtaiBADqiIat-6k_46
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: jp
+* knowledgetype: 5
 
 ## 1.0 作業を自動化できるタスクランナーとは？
 ```

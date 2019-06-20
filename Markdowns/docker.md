@@ -3,6 +3,8 @@ Docker
 * knowledgeid: -LdLvKb6JZ4xEuew0npf
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 8
 
 ## 1.0 解决的问题
 ```

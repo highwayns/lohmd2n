@@ -3,6 +3,8 @@ PowerShell 入門2
 * knowledgeid: -LdLtaiBADqiIat-6k_4b
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 5
 
 ## 1.0 Working with PowerShell Objects
 ```

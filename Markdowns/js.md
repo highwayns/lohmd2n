@@ -3,6 +3,8 @@
 * knowledgeid: -LdLuLklhwL7keqLFNmD
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 1
 
 ## 1.0 内置类型
 ```

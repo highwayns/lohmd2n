@@ -3,6 +3,8 @@ Oracle入門
 * knowledgeid: -LdLtaiBADqiIat-6k_8
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: jp
+* knowledgetype: 2
 
 ## 1.0 リレーショナルモデル
 ```

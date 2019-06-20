@@ -3,6 +3,8 @@ Spring Framework Document
 * knowledgeid: -LdLv2K4G35jI5thkNgR
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: jp
+* knowledgetype: 1
 
 ## 1.0 Springプロジェクトの作成
 ```

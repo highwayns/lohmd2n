@@ -3,6 +3,8 @@ Git 高级
 * knowledgeid: -LdLtaiBADqiIat-6k_g
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 5
 
 ## 1.0 Rebase 合并
 ```

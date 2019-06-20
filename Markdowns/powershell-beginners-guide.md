@@ -3,6 +3,8 @@ PowerShell 入門
 * knowledgeid: -LdLtaiBADqiIat-6k_4a
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 5
 
 ## 1.0 PowerShell Beginner’s Guide
 ```

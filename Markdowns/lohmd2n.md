@@ -3,6 +3,8 @@ LOH教材制作
 * knowledgeid: -LedXZi8fzaKO45rL-Kv
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 10
 
 ## 1.0 LOH教材制作基础
 ```

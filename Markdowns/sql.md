@@ -1,8 +1,10 @@
-SQL
+SQL 程序设计
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_3c
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 2
 
 ## 1.0 基础
 ```

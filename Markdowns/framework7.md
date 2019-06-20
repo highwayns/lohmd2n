@@ -3,6 +3,8 @@ Framework7 Study Guildline
 * knowledgeid: -LdLtaiBADqiIat-6k_3
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: en
+* knowledgetype: 3
 
 ## 1.0 App HTML Layout
 ```

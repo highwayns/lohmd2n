@@ -3,6 +3,8 @@
 * knowledgeid: -LdLtaiBADqiIat-6k_34
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 8
 
 ## 1.0 分布式锁
 ```

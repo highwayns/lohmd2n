@@ -3,6 +3,8 @@ Git入门
 * knowledgeid: -LdLtaiBADqiIat-6k_h
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 5
 
 ## 1.0 集中式与分布式
 ```
