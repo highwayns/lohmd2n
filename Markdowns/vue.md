@@ -3,6 +3,8 @@ VUE高級プログラムデザイン
 * knowledgeid: -LdLuU-AHWwvMHDT-QpQ
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
+* language: cn
+* knowledgetype: 10
 
 ## 1.0 NextTick 原理分析
 ```
