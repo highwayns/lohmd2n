@@ -1172,5 +1172,10 @@ updateRoute(route: Route) {
 至此，路由跳转已经全部分析完毕。核心就是判断需要跳转的路由是否存在于记录中，然后执行各种导航守卫函数，最后完成 URL 的改变和组件的渲染。
 ```
 
-## 31.9 御修了ありがとうございました。
+## 31.0 jsonserver
+```
+https://qiita.com/unpi/items/4f5951af615db7d19cee
+```
+
+## 32.9 御修了ありがとうございました。
 * certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLuU-AHWwvMHDT-QpQx31?alt=media&token=1e78ec08-ede5-4401-bd49-e344497f8f0f
