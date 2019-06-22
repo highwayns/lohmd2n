@@ -5,6 +5,8 @@ Minikube 入門
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 8
+* content_count: 13
+* introduce: Minikube 入門
 
 ## 1.0 ゴール
 ```

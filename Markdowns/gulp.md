@@ -5,6 +5,8 @@ Gulp 入門
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 5
+* content_count: 22
+* introduce: Gulp 入門
 
 ## 1.0 作業を自動化できるタスクランナーとは？
 ```

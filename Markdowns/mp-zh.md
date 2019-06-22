@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 47
+* introduce: 微信小程序
 
 ## 1.0 小程序-登录 unionid和openid
 ```

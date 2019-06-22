@@ -1,10 +1,12 @@
-csharp Book
+CSharp Book(6/19)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_csharp_6
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 100
+* introduce: CSharp Book(6/19)
 
 ## 1.4 第501页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/csharp/500.png?raw=true

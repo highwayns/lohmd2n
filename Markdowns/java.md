@@ -5,6 +5,8 @@ JAVA入門
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 1
+* content_count: 35
+* introduce: JAVA入門教材
 
 
 ## 1.0 Java 開発環境

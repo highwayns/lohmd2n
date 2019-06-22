@@ -5,6 +5,8 @@ ML Kit For Firebase
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 4
+* content_count: 20
+* introduce: ML Kit For Firebase
 
 ## 1.0 ML Kit For Firebaseとは
 ```

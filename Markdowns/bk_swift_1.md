@@ -1,10 +1,12 @@
-swift Book
+Swift Book(1/4)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_swift_1
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 3
+* content_count: 100
+* introduce: Swift Book(1/4)
 
 ## 1.4 第1页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/swift/0.png?raw=true

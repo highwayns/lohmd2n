@@ -1,10 +1,12 @@
-HTTP 入門
+HTTP 入门
 ====
 * knowledgeid: -LdLtaiBADqiIat-6k_49
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 24
+* introduce: HTTP 入门
 
 ## 1.0 URI
 ```

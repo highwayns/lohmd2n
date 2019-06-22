@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 8
+* content_count: 14
+* introduce: 集群设计，JS实现
 
 ## 1.0 负载均衡
 ```

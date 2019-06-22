@@ -1,10 +1,12 @@
-Firebase study Guildline
+Firebase Study Guildline
 ====
 * knowledgeid: -LdLtaiBADqiIat-6k_45
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 3
+* content_count: 39
+* introduce: Firebase Study Guildline
 
 ## 1.0 index
 ```

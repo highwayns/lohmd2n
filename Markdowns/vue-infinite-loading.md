@@ -5,6 +5,8 @@ Vue-Infinite-Loading Study Guildline
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 10
+* content_count: 11
+* introduce: Vue-Infinite-Loading Study Guildline
 
 ## 1.0 Installation
 ```

@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 10
+* introduce: 面向对象教程
 
 ## 1.0 三大特性
 ```

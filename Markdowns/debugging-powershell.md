@@ -5,6 +5,8 @@ Debugging in PowerShell
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 5
+* content_count: 5
+* introduce: Debugging in PowerShell
 
 ## 1.0 Debugging in PowerShell Command-line
 ```

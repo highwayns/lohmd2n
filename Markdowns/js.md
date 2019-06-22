@@ -1,10 +1,12 @@
-﻿JS For Advance Progromer
+﻿JS 高级教材
 ===
 * knowledgeid: -LdLuLklhwL7keqLFNmD
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 25
+* introduce: JAVA高级教材
 
 ## 1.0 内置类型
 ```

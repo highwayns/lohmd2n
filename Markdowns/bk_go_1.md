@@ -1,10 +1,12 @@
-go Book
+GO Book
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_go_1
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 48
+* introduce: GO Book
 
 ## 1.4 第1页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/go/0.png?raw=true

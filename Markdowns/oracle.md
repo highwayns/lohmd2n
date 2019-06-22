@@ -5,6 +5,8 @@ Oracle入門
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 2
+* content_count: 43
+* introduce: Oracle入門
 
 ## 1.0 リレーショナルモデル
 ```

@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 14
+* introduce: 正则表达式教程
 
 ## 1.0 概述
 ```

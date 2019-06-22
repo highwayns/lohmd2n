@@ -1,10 +1,12 @@
-kubernetes Book
+Kubernetes Book(4/6)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_kubernetes_4
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 8
+* content_count: 100
+* introduce: Kubernetes Book(4/6)
 
 ## 1.4 第301页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/kubernetes/300.png?raw=true

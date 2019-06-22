@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 23
+* introduce: 网络基础
 
 ## 1.0 UDP 面向报文
 ```

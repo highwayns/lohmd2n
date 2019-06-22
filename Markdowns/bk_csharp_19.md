@@ -5,6 +5,8 @@ csharp Book
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 28
+* introduce: CSharp Book(19/19)
 
 ## 1.4 第1801页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/csharp/1800.png?raw=true

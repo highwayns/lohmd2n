@@ -1,10 +1,12 @@
-Docker Overview
+Docker　マニュアル
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_44
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 8
+* content_count: 15
+* introduce: Dockerマニュアル
 
 ## 1.0 こんな人に有効
 ```

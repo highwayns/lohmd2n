@@ -1,10 +1,12 @@
-Spring Framework Document
+Spring Framework マニュアル
 ===
 * knowledgeid: -LdLv2K4G35jI5thkNgR
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 1
+* content_count: 55
+* introduce: Spring Framework マニュアル
 
 ## 1.0 Springプロジェクトの作成
 ```

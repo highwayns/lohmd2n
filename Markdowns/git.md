@@ -5,6 +5,8 @@ Git入门
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 5
+* content_count: 12
+* introduce: Git 入门命令
 
 ## 1.0 集中式与分布式
 ```

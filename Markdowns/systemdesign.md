@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 7
+* introduce: 系统设计教程
 
 ## 1.0 性能指标
 ```

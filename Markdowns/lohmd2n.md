@@ -5,6 +5,8 @@ LOH教材制作
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 10
+* content_count: 5
+* introduce: LOH教材制作
 
 ## 1.0 LOH教材制作基础
 ```

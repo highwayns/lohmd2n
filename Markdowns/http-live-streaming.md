@@ -5,6 +5,8 @@ HTTP Live Streaming 入門
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 10
+* content_count: 10
+* introduce: HTTP Live Streaming 入門
 
 ## 1.0 はじめに
 ```

@@ -1,10 +1,12 @@
-objectc Book
+ObjectC Book(6/6)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_objectc_6
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 3
+* content_count: 22
+* introduce: ObjectC Book(6/6)
 
 ## 1.4 第501页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/objectc/500.png?raw=true

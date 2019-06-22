@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 2
+* content_count: 14
+* introduce: 数据库原理教程
 
 ## 1.0 事务
 ```

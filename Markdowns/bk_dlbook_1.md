@@ -1,10 +1,12 @@
-dlbook Book
+Deep Learning Book(1/8)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_dlbook_1
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 4
+* content_count: 100
+* introduce: Deep Learning Book(1/8)
 
 ## 1.4 第1页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/dlbook/0.png?raw=true

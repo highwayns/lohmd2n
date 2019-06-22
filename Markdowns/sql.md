@@ -5,6 +5,8 @@ SQL 程序设计
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 2
+* content_count: 28
+* introduce: SQL 程序设计
 
 ## 1.0 基础
 ```

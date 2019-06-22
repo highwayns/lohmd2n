@@ -27,6 +27,7 @@
     "pdf2png-mp2": "^1.0.3",
     "ppt2png": "0.0.6",
     "pureimage": "^0.1.6",
-    "remark": "^10.0.1"
+    "remark": "^10.0.1",
+    "xmlhttprequest": "^1.8.0"
   }
 }

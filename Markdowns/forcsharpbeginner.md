@@ -5,6 +5,8 @@ C# For Beginner
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
 * language: jp
 * knowledgetype: 1
+* content_count: 20
+* introduce: C#　入門、海威C#訓練専用教材
 
 ## 1.0 数の進数
 ```

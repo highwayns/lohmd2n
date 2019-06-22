@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 1
+* content_count: 69
+* introduce: Python　入門
 
 ## 1.4 課程紹介
 * picturePath: http://jp.highwayns.com/study_1/pythonintro/幻灯片1.PNG

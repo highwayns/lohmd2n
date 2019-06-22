@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 20
+* introduce: 数据结构教程
 
 ## 1.0 栈 概念
 ```

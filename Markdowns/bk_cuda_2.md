@@ -1,10 +1,12 @@
-cuda Book
+CUDA Book(2/3)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_cuda_2
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 7
+* content_count: 100
+* introduce: CUDA Book(2/3)
 
 ## 1.4 第101页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/cuda/100.png?raw=true

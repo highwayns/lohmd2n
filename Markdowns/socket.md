@@ -1,10 +1,12 @@
-Socket
+Socket通讯
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_3b
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 16
+* introduce: Socket通讯教程
 
 ## 1.0 I/O 模型
 ```

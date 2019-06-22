@@ -1,10 +1,12 @@
-js Book
+JS Book(4/5)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_js_4
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 1
+* content_count: 100
+* introduce: JS Book(1/5)
 
 ## 1.4 第301页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/js/300.png?raw=true

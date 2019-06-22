@@ -1,10 +1,12 @@
-openshift入门
+Openshift入門
 ===
 * knowledgeid: -LdLvjsjW3CGLyxi3Qb2
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 8
+* content_count: 26
+* introduce: Openshift入門
 
 ## 1.0 準備
 ```

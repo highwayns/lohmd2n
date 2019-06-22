@@ -1,10 +1,12 @@
-Git 高级
+Git 高级命令
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_g
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 5
+* content_count: 7
+* introduce: Git 高级命令
 
 ## 1.0 Rebase 合并
 ```

@@ -5,6 +5,8 @@ Angular Document
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
 * language: jp
 * knowledgetype: 6
+* content_count: 85
+* introduce: Angularのマニュアルです、仕事に役に立ちます。
 
 ## 1.0 Angularへようこそ
 ```

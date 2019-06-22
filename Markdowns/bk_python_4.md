@@ -1,10 +1,12 @@
-python Book
+Python Book(4/12)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_python_4
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 2
+* content_count: 100
+* introduce: Python Book(4/12)
 
 ## 1.4 第301页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/python/300.png?raw=true

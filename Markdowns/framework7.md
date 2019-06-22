@@ -5,6 +5,8 @@ Framework7 Study Guildline
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 3
+* content_count: 59
+* introduce: Framework7 Study Guildline
 
 ## 1.0 App HTML Layout
 ```

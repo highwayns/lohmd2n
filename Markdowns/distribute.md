@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 8
+* content_count: 13
+* introduce: 分布式计算教程
 
 ## 1.0 分布式锁
 ```

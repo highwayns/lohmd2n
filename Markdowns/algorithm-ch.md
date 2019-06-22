@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 10
+* content_count: 27
+* introduce: 基础算法介绍和jS实现
 
 ## 1.0 时间复杂度
 ```

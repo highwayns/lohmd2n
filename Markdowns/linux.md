@@ -5,6 +5,8 @@ Linux入门
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 5
+* content_count: 55
+* introduce: Linux入门
 
 ## 1.0 快捷键
 ```

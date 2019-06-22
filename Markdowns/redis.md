@@ -1,10 +1,12 @@
-redis
+Redis教程
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_39
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 21
+* introduce: Redis教程
 
 ## 1.0 概述
 ```

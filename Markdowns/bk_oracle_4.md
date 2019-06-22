@@ -1,10 +1,12 @@
-oracle Book
+Oracle Book(4/7)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_oracle_4
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 2
+* content_count: 100
+* introduce: Oracle Book(4/7)
 
 ## 1.4 第301页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/oracle/300.png?raw=true

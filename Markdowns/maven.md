@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 5
+* content_count: 6
+* introduce: 构建工具
 
 ## 1.0 构建工具的作用
 ```

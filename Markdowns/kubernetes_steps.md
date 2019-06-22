@@ -1,10 +1,12 @@
-kubernetes入门
+kubernetes入門
 ===
 * knowledgeid: -LdLvYhoIN8mERmK7vQo
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 6
+* content_count: 16
+* introduce: kubernetes入門
 
 ## 1.0 kubernetesとは
 ```

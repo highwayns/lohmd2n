@@ -1,10 +1,12 @@
-PowerShell 入門
+PowerShell 
 ====
 * knowledgeid: -LdLtaiBADqiIat-6k_4a
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 5
+* content_count: 19
+* introduce: PowerShell
 
 ## 1.0 PowerShell Beginner’s Guide
 ```

@@ -5,6 +5,8 @@ msql
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 2
+* content_count: 18
+* introduce: msql
 
 ## 1.0 数据结构
 ```

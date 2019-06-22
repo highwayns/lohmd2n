@@ -1,10 +1,12 @@
-create powershell scripts
+Create Powershell Scripts
 ===
 * knowledgeid: -LdLtaiBADqiIat-6k_42
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 5
+* content_count: 5
+* introduce: Create Powershell Scripts
 
 ## 1.0 How to Create and Run PowerShell Scripts
 ```

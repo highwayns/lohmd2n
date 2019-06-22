@@ -1,10 +1,12 @@
-shell Book
+Shell Book(3/4)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_shell_3
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 5
+* content_count: 100
+* introduce: Shell Book(3/4)
 
 ## 1.4 第201页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/shell/200.png?raw=true

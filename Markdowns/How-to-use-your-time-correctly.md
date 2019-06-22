@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 10
+* content_count: 8
+* introduce: 面试准备
 
 ## 1.0 花时间补基础，读文档
 ```

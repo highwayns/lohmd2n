@@ -5,6 +5,8 @@ Hybrid Devlopment Guidline
 * authorid: CIxg5db1wHWTu1eeymVp4EkLzfg1
 * language: jp
 * knowledgetype: 3
+* content_count: 25
+* introduce: Hybrid Devlopment Guidline、海威専用教材
 
 ## 1.0 Git
 ```

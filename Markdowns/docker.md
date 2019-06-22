@@ -5,6 +5,8 @@ Docker
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 8
+* content_count: 12
+* introduce: Docker教程
 
 ## 1.0 解决的问题
 ```

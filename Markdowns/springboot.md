@@ -1,10 +1,12 @@
-Springboot Document
+Springboot マニュアル
 ===
 * knowledgeid: -LdLtODpcc-J83q1aU5f
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: jp
 * knowledgetype: 1
+* content_count: 65
+* introduce: Springboot マニュアル
 
 ## 1.0 JSONを返す
 ```

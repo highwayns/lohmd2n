@@ -5,6 +5,8 @@ Tensorflow.js
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 4
+* content_count: 12
+* introduce: Tensorflow.js
 
 ## 1.0 Generate an Angular App
 ```

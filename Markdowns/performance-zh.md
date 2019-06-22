@@ -5,6 +5,8 @@
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
 * knowledgetype: 6
+* content_count: 15
+* introduce: 性能调整教程
 
 ## 1.0 DNS 预解析
 ```

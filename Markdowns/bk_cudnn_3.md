@@ -1,10 +1,12 @@
-cudnn Book
+CUDNN Book(3/3)
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x_cudnn_3
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: en
 * knowledgetype: 7
+* content_count: 59
+* introduce: CUDNN Book(3/3)
 
 ## 1.4 第201页
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/cudnn/200.png?raw=true
