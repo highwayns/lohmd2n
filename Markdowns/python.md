@@ -1,4 +1,4 @@
-﻿Python　入門
+﻿Python入門
 ===
 * knowledgeid: -LdLubY6J4gW1t94t63x
 * author: tei952
@@ -6,7 +6,7 @@
 * language: jp
 * knowledgetype: 1
 * content_count: 69
-* introduce: Python　入門
+* introduce: Python入門
 
 ## 1.4 課程紹介
 * picturePath: http://jp.highwayns.com/study_1/pythonintro/幻灯片1.PNG

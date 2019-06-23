@@ -4,7 +4,8 @@ Caffe Book(2/4)
 * author: tei952
 * authorid: iHmcxnnRDWPOJAE38On1nCdq0ir2
 * language: cn
-* kno* content_count: 100
+* knowledgetype: 4
+* content_count: 100
 * introduce: Caffe Book(2/4)
 
 ## 1.4 第101页
