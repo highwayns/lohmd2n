@@ -213,4 +213,4 @@
 * picturePath: http://jp.highwayns.com/study_1/pythonintro/幻灯片68.PNG
 
 ## 69.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLubY6J4gW1t94t63xx69?alt=media&token=a8381d53-207e-46b9-8419-6df5f958f94a
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/python.png?raw=true

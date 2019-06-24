@@ -70,4 +70,4 @@
  保证消息具有唯一编号，并使用一张日志表来记录已经消费的消息编号。
 ```
 ## 5.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_38x05?alt=media&token=88b0c1ac-cae2-4777-baf9-e9892f32e8fd
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/queue.png?raw=true

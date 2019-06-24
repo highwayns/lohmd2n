@@ -309,4 +309,4 @@ Vue.use(InfiniteLoading, {
 ```
 
 ## 11.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_4x10?alt=media&token=96240967-b020-458d-a7bb-676dde19f6ed
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/vue-infinite-loading.png?raw=true

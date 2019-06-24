@@ -604,4 +604,4 @@ js
   ![](https://user-gold-cdn.xitu.io/2018/3/29/1626fb6f33a6f9d7?w=1588&h=768&f=png&s=263260)
 ```
 ## 20.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_dx20?alt=media&token=70c2e29c-49c1-45dd-a341-4cc012ca23a9
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/browser-ch.png?raw=true

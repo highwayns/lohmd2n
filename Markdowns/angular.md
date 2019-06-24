@@ -1635,4 +1635,4 @@ function handleData(data) {
 }
 ```
 ## 82.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHFx80?alt=media&token=3a021dd2-2a44-4b4c-a3da-342fd9cda144
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/angular.png?raw=true

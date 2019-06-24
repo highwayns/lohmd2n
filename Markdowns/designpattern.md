@@ -2864,4 +2864,4 @@ public class ImageViewer {
 }
 ```
 ## 32.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_33x33?alt=media&token=2e84380e-4b26-461e-9ef4-6eaaf9b581a7
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/designpattern.png?raw=true

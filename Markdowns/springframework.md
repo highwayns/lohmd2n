@@ -2125,4 +2125,4 @@ trueのものだけを検索します。
 ```
 
 ## 55.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLv2K4G35jI5thkNgRx24?alt=media&token=5ec26c14-99a4-4f1a-8a78-e7cc4b9bc68f
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/springframework.png?raw=true

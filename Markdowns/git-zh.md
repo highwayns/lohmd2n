@@ -83,5 +83,5 @@ git reset --hard HEAD^
 ```
 
 ## 5.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_gx07?alt=media&token=1a6051cc-49ef-4151-9797-75a1f3851c65
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/git-zh.png?raw=true
 

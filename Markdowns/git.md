@@ -166,4 +166,4 @@ Git 命令一览
 ```
 
 ## 12.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_hx12?alt=media&token=a3f87c5e-2344-48c4-809c-37098d50e7f7
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/git.png?raw=true

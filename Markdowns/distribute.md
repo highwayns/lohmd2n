@@ -308,4 +308,4 @@ Raft 也是分布式一致性协议，主要是用来竞选主节点。
 <div align="center"> <img src="pics/111550414182638.gif"/> </div><br>
 ```
 ## 13.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_34x13?alt=media&token=ba47398e-e2f4-45a2-a349-37953df46964
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/distribute.png?raw=true

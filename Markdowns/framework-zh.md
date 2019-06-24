@@ -743,5 +743,5 @@ setTimeout(() => {
 足够的了。
 ```
 ## 14.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_fx14?alt=media&token=fad94be0-4782-41ad-80b3-e96dd0e06286
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/framework-zh.png?raw=true
 

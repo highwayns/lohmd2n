@@ -353,4 +353,4 @@ aBCd
   **33333-4444** 
 ```
 ## 14.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_3ax14?alt=media&token=3981ca02-c4e7-4466-b15d-550d39f80e63
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/regex.png?raw=true

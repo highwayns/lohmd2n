@@ -172,4 +172,4 @@ IOS
 ```
 
 ## 20.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbYZZXvYQxtpo2AWpzLx20?alt=media&token=aa38337f-96f1-42b8-a2ba-e5c248c7f5ef
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/forcsharpbeginner.png?raw=true

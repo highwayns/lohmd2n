@@ -60,5 +60,5 @@ authorid: 作者编号
 ```
 
 ## 5.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LedXZi8fzaKO45rL-Kvx05?alt=media&token=a5618a45-dacf-46cd-8232-7e7b8b6c94ab
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/lohmd2n.png?raw=true
 

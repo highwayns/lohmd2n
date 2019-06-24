@@ -271,4 +271,4 @@ html
 ```
 
 ## 15.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_cx15?alt=media&token=b0bc9e21-dd26-4e3f-b2fb-01638c512c70
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/performance-zh.png?raw=true

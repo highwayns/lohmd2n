@@ -205,4 +205,4 @@ Building and training machine learning models in the browser ushers
  TensorFlow content, let me know in the comments or on Slack. 
  ```
 ## 12.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_7x12?alt=media&token=ac3208d0-60fb-4190-be81-26f2e6788424
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/tensorflowjs.png?raw=true

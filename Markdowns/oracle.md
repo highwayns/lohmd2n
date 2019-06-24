@@ -828,4 +828,4 @@ SELECT
 ```
 
 ## 43.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_8x45?alt=media&token=e9ceb421-9a51-4c9e-9b0f-4fa2b95e3653
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/oracle.png?raw=true

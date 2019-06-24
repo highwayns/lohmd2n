@@ -79,5 +79,5 @@
 ```
 
 ## 8.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLwZEoLZc4i2v8T5QRx08?alt=media&token=f2428a86-338d-4298-aef1-f9fc83173a0e
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/How-to-use-your-time-correctly.png?raw=true
 

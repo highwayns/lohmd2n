@@ -136,4 +136,3 @@ A -> C -> X(2.0)
 找到 Maven 加载的 Jar 包版本，使用 'mvn dependency:tree' 查看依赖树，根据依赖原则来调整依赖在 POM 文件的声明顺序。
 ```
 ## 6.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_35x06?alt=media&token=865cdb08-6625-401e-a4e2-341e793b1db1

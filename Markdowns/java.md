@@ -717,4 +717,4 @@ XML を読み込む
 XmlPull を利用した XML の解析 - kXML 
 ```
 ## 35.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_9x36?alt=media&token=ae597a39-1bcc-4937-aa0f-aff181084db8
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/java.png?raw=true

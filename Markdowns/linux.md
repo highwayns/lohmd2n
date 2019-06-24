@@ -1238,4 +1238,4 @@ waitpid() 调用变成非阻塞的，也就是说它会立即返回，父进程�
 ```
 
 ## 55.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLwITanyNoAGvVvlChx55?alt=media&token=d18e98bf-4c63-4d3a-b183-ca0e080dfc56
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/linux.png?raw=true

@@ -406,4 +406,4 @@ https://github.com/ahmed-musallam/AtACE-AEM-Vue
 ```
 
 ## 25.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-Ld495mtWIyObJzEEK7sx25?alt=media&token=0453e441-50a5-4364-ae8d-c941e2e11f66
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/hybriddev.png?raw=true

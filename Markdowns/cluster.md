@@ -200,4 +200,4 @@ Session Server
 <div align="center"> <img src="pics/fdc45a09-f838-4348-8959-d2c793727788.png" width="600px"/> </div><br>
 ```
 ## 14.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_31x14?alt=media&token=0699bee5-c5b6-42bd-8773-74fe6c414217
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/cluster.png?raw=true

@@ -1151,4 +1151,4 @@ http://localhost:8080/health にアクセスすると、システムの状態を
 ```
 
 ## 64.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtODpcc-J83q1aU5fx66?alt=media&token=62ade9d6-a6f9-4ac6-ac0d-52c05e4b4910
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/springboot.png?raw=true

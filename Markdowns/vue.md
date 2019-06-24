@@ -1182,4 +1182,4 @@ https://qiita.com/unpi/items/4f5951af615db7d19cee
 ```
 
 ## 32.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLuU-AHWwvMHDT-QpQx31?alt=media&token=1e78ec08-ede5-4401-bd49-e344497f8f0f
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/vue.png?raw=true

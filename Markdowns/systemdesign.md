@@ -104,4 +104,4 @@
 ```
 
 ## 7.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_3dx07?alt=media&token=e10bfd61-747d-4704-b381-8976ff226053
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/systemdesign.png?raw=true

@@ -947,4 +947,4 @@ class MaxHeap {
 }
 ```
 ## 20.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_ex20?alt=media&token=11e09d29-f5cd-4cb1-a6f3-9b57cb026bb1
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/dataStruct-zh.png?raw=true

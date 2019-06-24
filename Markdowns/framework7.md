@@ -3202,5 +3202,5 @@ Framework7.use(myPlugin);
 ```
 
 ## 59.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_3x36?alt=media&token=fea48fd5-2624-4538-abce-5958da467618
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/framework7.png?raw=true
 

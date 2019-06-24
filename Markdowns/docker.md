@@ -80,4 +80,4 @@ Docker 轻量级的特点使得它很适合用于部署、维护、组合微服�
 <div align="center"> <img src="pics/docker-filesystems-busyboxrw.png"/> </div><br>
 ```
 ## 12.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FCIxg5db1wHWTu1eeymVp4EkLzfg1%2F-LbW07Cj8C37LDyZeKHF-LcPuq3uP8_kKl9Si9yX?alt=media&token=22d159ac-ead7-4465-9279-35ce0d322b20
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/docker.png?raw=true

@@ -919,4 +919,4 @@ p.a // -> Get 'a' = 2
 ```
 
 ## 19.9 学習終了頂きまして、おめでとうございます！
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLuLklhwL7keqLFNmDx25?alt=media&token=53a5427b-0faa-4678-b471-00a84db90bbb
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/js.png?raw=true

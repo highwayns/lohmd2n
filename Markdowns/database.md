@@ -523,4 +523,4 @@ Entity-Relationship，有三个组成部分：实体、属性、联系。
 <div align="center"> <img src="pics/14389ea4-8d96-4e96-9f76-564ca3324c1e.png" width="450px"/> </div><br>
 ```
 ## 14.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_32x14?alt=media&token=9507c7b0-9aef-4c3d-a4ea-2288c3fdf94e
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/database.png?raw=true

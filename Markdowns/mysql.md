@@ -377,4 +377,4 @@ ID 唯一性
 <div align="center"> <img src="pics/master-slave-proxy.png" width=""> </div><br>
 ```
 ## 20.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_5x18?alt=media&token=7b5d062a-d03d-43eb-b04c-fdaaee00490d
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/mysql.png?raw=true

@@ -621,4 +621,4 @@ PS：DNS 是基于 UDP 做的查询。
 ```
 
 ## 23.9 御修了ありがとうございました。
-* certificatePath: https://firebasestorage.googleapis.com/v0/b/wohapp-3a179.appspot.com/o/knowledgecontents%2FiHmcxnnRDWPOJAE38On1nCdq0ir2%2F-LdLtaiBADqiIat-6k_bx23?alt=media&token=3be82fae-b692-4937-80eb-35b4487bbec1
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/network-zh.png?raw=true
