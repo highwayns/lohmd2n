@@ -342,3 +342,4 @@ For more details, see [Create and Run PowerShell Script Guide][create-run-script
 [create-run-script]:./create-powershell-scripts.md
 ```
 ## 19.9 御修了ありがとうございました。
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/powershell-beginners-guide.png?raw=true

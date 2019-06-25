@@ -136,3 +136,4 @@ A -> C -> X(2.0)
 找到 Maven 加载的 Jar 包版本，使用 'mvn dependency:tree' 查看依赖树，根据依赖原则来调整依赖在 POM 文件的声明顺序。
 ```
 ## 6.9 御修了ありがとうございました。
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/maven.png?raw=true

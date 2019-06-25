@@ -75,3 +75,4 @@ Remove loopback address from output regardless of platform
 $IP | Where-Object {$_ -ne '127.0.0.1'}
 ```
 ## 9.9 御修了ありがとうございました。
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/create-powershell-scripts.png?raw=true

@@ -142,3 +142,4 @@ PS /home/psuser> $d[1].'Total Size' / 1MB
 148480
 ```
 ## 8.9 御修了ありがとうございました。
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/working-with-powershell-objects.png?raw=true

@@ -178,3 +178,4 @@ Now you know the basics of the PowerShell debugging from PowerShell command-line
   [PowerShell Debugging](https://blogs.technet.microsoft.com/heyscriptingguy/tag/debugging/)
 ```
 ## 5.9 御修了ありがとうございました。
+* certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/debugging-powershell.png?raw=true
