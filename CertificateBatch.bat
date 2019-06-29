@@ -1,4 +1,4 @@
-echo Certificate Batch for create & upload certificate image
+echo Certificate Batch for create and upload certificate image
 gulp CreateCertificate --option algorithm-ch
 gulp CreateCertificate --option angular
 gulp CreateCertificate --option bk_android_1
@@ -165,3 +165,4 @@ gulp CreateCertificate --option vue-infinite-loading
 gulp CreateCertificate --option vue
 gulp CreateCertificate --option working-with-powershell-objects
 gulp CreateCertificate --option 人工智能数学基础
+gulp CreateCertificate --option lohguildline

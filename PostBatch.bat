@@ -164,3 +164,4 @@ gulp CreatePost --option vue-infinite-loading
 gulp CreatePost --option vue
 gulp CreatePost --option working-with-powershell-objects
 gulp CreatePost --option 人工智能数学基础
+gulp CreatePost --option lohguildline
