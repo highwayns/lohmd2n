@@ -32,6 +32,18 @@ LOH Guildline
 ## 8.4 学习
 * picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/lohstudent/7.png?raw=true
 
-## 9.9 御修了ありがとうございました。
+## 9.4 学习
+* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/lohstudent/8.png?raw=true
+
+## 10.4 学习
+* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/lohstudent/9.png?raw=true
+
+## 11.4 学习
+* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/lohstudent/10.png?raw=true
+
+## 12.4 学习
+* picturePath: https://github.com/highwayns/lohmd2n/blob/master/PNGs/lohstudent/11.png?raw=true
+
+## 13.9 御修了ありがとうございました。
 * certificatePath: https://github.com/highwayns/lohmd2n/blob/master/Certificates/lohstudent.png?raw=true
 

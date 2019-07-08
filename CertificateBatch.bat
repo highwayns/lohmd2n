@@ -166,3 +166,6 @@ gulp CreateCertificate --option vue
 gulp CreateCertificate --option working-with-powershell-objects
 gulp CreateCertificate --option 人工智能数学基础
 gulp CreateCertificate --option lohguildline
+gulp CreateCertificate --option release_android
+gulp CreateCertificate --option release_windows
+gulp CreateCertificate --option release_ios
