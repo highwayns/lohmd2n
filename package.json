@@ -13,7 +13,7 @@
     "gulp-markdown": "^1.2.0",
     "gulp-markdown-pdf": "^5.0.0",
     "gulp-markdown-to-json": "^1.1.0",
-    "marked": "^0.3.6"
+    "marked": "^4.0.10"
   },
   "dependencies": {
     "axios": "^0.18.0",
